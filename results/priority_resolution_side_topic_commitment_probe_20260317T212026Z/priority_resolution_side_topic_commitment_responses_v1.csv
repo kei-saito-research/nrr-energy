@@ -1,0 +1,218 @@
+run_item_id,template_id,acceptance_variant_id,rep_id,provider,model,temperature,active_main_objective,later_side_topic_turn,fixed_turn3_handoff_text,acceptance_turn,arm_label,assistant_turn5_response,turn5_output_tokens,system_prompt_sha256,ran_at_utc
+PSA_A_side_r01,A_trip_planning,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,"Should we focus on budget and schedule first, or switch to restaurants now?",Let's switch to restaurants first.,baseline,"Sure! To help you find the right restaurants, I have a few quick questions:
+
+- **Where** are you traveling to?
+- **What cuisine** do you prefer?
+- **What's your budget** per meal?
+- Any **dietary restrictions**?",59,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_A_side_r02,A_trip_planning,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,"Should we focus on budget and schedule first, or switch to restaurants now?",Let's switch to restaurants first.,baseline,"Sure! To help you find the right restaurants, could you share a few details?
+
+- **Where** are you traveling to?
+- **What type of cuisine** do you prefer?
+- **What's your budget** per meal?
+- **Any dietary restrictions?**",61,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_A_side_r03,A_trip_planning,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,"Should we focus on budget and schedule first, or switch to restaurants now?",Let's switch to restaurants first.,baseline,"Sure! To help you find the right restaurants, could you share a few details?
+
+- **Where** are you traveling to?
+- **What type of cuisine** do you prefer?
+- **What's your budget** per meal?
+- **Any dietary restrictions?**",61,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_A_side_r04,A_trip_planning,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,"Should we focus on budget and schedule first, or switch to restaurants now?",Let's switch to restaurants first.,baseline,"Sure! To help you find the right restaurants, could you share a few details?
+
+- **Where** are you traveling to?
+- **What type of cuisine** do you prefer?
+- **What's your budget** per meal?
+- **Any dietary restrictions?**",61,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_B_side_r01,B_hiring_packet,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,"Should we focus on the hiring packet first, or switch to onboarding training?",Let's switch to onboarding training first.,baseline,"Sure! What aspects of onboarding training do you want to think through? For example:
+
+- **Topics to cover** (company policies, tools, role-specific training)
+- **Format** (in-person, online, self-paced)
+- **Duration and schedule**
+- **Who leads the training**
+
+Where would you like to start?",80,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_B_side_r02,B_hiring_packet,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,"Should we focus on the hiring packet first, or switch to onboarding training?",Let's switch to onboarding training first.,baseline,"Sure! What aspects of onboarding training do you want to think through? For example:
+
+- **Topics to cover** (company policies, tools, role-specific training)
+- **Format** (in-person, virtual, self-paced)
+- **Duration** (first day, first week, first 30 days)
+- **Who leads it** (HR, manager, buddy system)
+
+Where do you want to start?",98,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_B_side_r03,B_hiring_packet,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,"Should we focus on the hiring packet first, or switch to onboarding training?",Let's switch to onboarding training first.,baseline,"Sure! What aspects of onboarding training do you want to think through? For example:
+
+- **Topics to cover** (company policies, tools, role-specific training)
+- **Format** (in-person, online, self-paced)
+- **Duration** (first day, first week, first 30 days)
+- **Who leads it** (HR, manager, buddy system)
+
+Where would you like to start?",98,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_B_side_r04,B_hiring_packet,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,"Should we focus on the hiring packet first, or switch to onboarding training?",Let's switch to onboarding training first.,baseline,"Sure! What aspects of onboarding training do you want to think through? For example:
+
+- **Topics to cover** (company policies, tools, role-specific training)
+- **Format** (in-person, online, self-paced)
+- **Duration and schedule**
+- **Who leads the training**
+
+Where would you like to start?",80,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_C_side_r01,C_incident_response,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,"Should we focus on the incident-response plan first, or switch to the postmortem format?",Let's switch to the postmortem format first.,baseline,"Sure! Here's a simple postmortem format to start with:
+
+---
+
+**Postmortem Template**
+
+**1. Incident Summary**
+- Date/time, duration, severity
+- Brief description of what happened
+
+**2. Timeline**
+- Key events from detection to resolution
+
+**3. Root Cause**
+- What actually caused the incident
+
+**4. Impact**
+- Users/systems affected, business impact
+
+**5. What Went Well**
+- Things that helped during response
+
+**6. What Went Wrong**
+- Gaps or failures in process/tooling
+
+**7. Action Items**
+- Specific fixes with owners and due dates
+
+---
+
+A few questions to tailor this further:
+
+- **Audience** - is this internal only, or shared with customers?
+- **Severity levels** - do you want different templates per severity?
+- **Blameless culture** - should the format explicitly discourage finger-pointing?
+
+Once we nail this down we can circle back to the **escalation contacts and response timing** for the incident-response plan.",240,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_C_side_r02,C_incident_response,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,"Should we focus on the incident-response plan first, or switch to the postmortem format?",Let's switch to the postmortem format first.,baseline,"Sure! Here's a simple postmortem format to start with:
+
+---
+
+**Postmortem Template**
+
+**1. Incident Summary**
+- Date/time of incident
+- Duration
+- Severity level
+- Brief description
+
+**2. Timeline**
+- Chronological sequence of events
+- Detection, escalation, and resolution timestamps
+
+**3. Root Cause Analysis**
+- What caused the incident?
+- Contributing factors
+
+**4. Impact**
+- Systems/services affected
+- Number of users impacted
+- Business impact
+
+**5. Resolution**
+- What fixed the issue?
+- Immediate vs. long-term fix
+
+**6. Action Items**
+- Preventive measures
+- Owner and due date for each item
+
+**7. Lessons Learned**
+- What went well?
+- What could be improved?
+
+---
+
+A few questions to tailor this further:
+
+- **Who is the audience?** (Engineering team, leadership, customers?)
+- **How formal does it need to be?** (Internal wiki vs. external communication?)
+- **Do you want a blameless format?** (Focusing on systems/processes rather than individuals?)
+
+That will help me refine the structure and tone.",273,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_C_side_r03,C_incident_response,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,"Should we focus on the incident-response plan first, or switch to the postmortem format?",Let's switch to the postmortem format first.,baseline,"Sure! Here's a simple postmortem format to start with:
+
+---
+
+**Postmortem Template**
+
+**1. Incident Summary**
+- Date/time, duration, severity
+- Brief description of what happened
+
+**2. Timeline**
+- Key events from detection to resolution
+
+**3. Root Cause**
+- What actually caused the incident
+
+**4. Impact**
+- Users/systems affected, business impact
+
+**5. What Went Well**
+- Things that helped during response
+
+**6. What Went Wrong**
+- Gaps or failures in process/tooling
+
+**7. Action Items**
+- Specific fixes with owners and due dates
+
+---
+
+A few questions to tailor this further:
+
+- **Audience** - is this internal only, or shared with customers?
+- **Severity levels** - do you want different templates per severity?
+- **Blameless culture** - should the format explicitly discourage finger-pointing?
+
+Once we nail this down we can circle back to the **escalation contacts and response timing** for the incident-response plan.",240,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z
+PSA_C_side_r04,C_incident_response,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,"Should we focus on the incident-response plan first, or switch to the postmortem format?",Let's switch to the postmortem format first.,baseline,"Sure! Here's a simple postmortem format to start with:
+
+---
+
+## Postmortem Template
+
+**1. Incident Summary**
+- Date/time, duration, severity
+- Brief description of what happened
+
+**2. Timeline**
+- Key events in chronological order
+- When it was detected, escalated, and resolved
+
+**3. Root Cause**
+- What actually caused the incident
+- Contributing factors
+
+**4. Impact**
+- Users/systems affected
+- Business impact
+
+**5. What Went Well**
+- Things that helped during the response
+
+**6. What Went Wrong**
+- Gaps in process, tooling, or communication
+
+**7. Action Items**
+- Specific follow-up tasks
+- Owner and due date for each
+
+---
+
+A few questions to tailor this further:
+
+- **Blameless culture?** Should the format explicitly discourage finger-pointing?
+- **Severity levels?** Do you want sections to vary based on incident severity?
+- **Audience?** Is this for an engineering team only, or also for stakeholders/executives?
+
+That will help me refine the format before we go back to the incident-response plan.",266,222618a2da771aba80844aab58d23864fdf734651178e87296d1aa3ba7d53942,2026-03-17T21:20:26Z

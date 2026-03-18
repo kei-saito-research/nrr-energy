@@ -1,0 +1,25 @@
+{
+  "run_label": "priority_resolution_live_template_probe_v1",
+  "arm_label": "nrr_priority_resolution_v1",
+  "generated_at_utc": "2026-03-17T09:10:51Z",
+  "input_csv": "results/analysis/energy_priority_resolution_run_input_v2_2026-03-17.csv",
+  "n_rows": 24,
+  "system_prompt_source": "configs/priority_resolution/priority_resolution_nrr_arm_system_prompt_v1.txt",
+  "system_prompt_sha256": "e8fe0fd2eae272add18b19d752378be6ba1ae109af01eaa6cd233ddea51f5083",
+  "templates": [
+    "A_trip_planning",
+    "B_hiring_packet",
+    "C_incident_response"
+  ],
+  "providers": [
+    "anthropic"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "temperatures": [
+    "0.0"
+  ],
+  "response_csv": "results/priority_resolution_live_probe_20260317T091051Z/priority_resolution_live_probe_responses_v1.csv",
+  "raw_jsonl": "results/priority_resolution_live_probe_20260317T091051Z/priority_resolution_live_probe_raw_v1.jsonl"
+}

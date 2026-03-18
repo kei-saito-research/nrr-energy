@@ -1,0 +1,1212 @@
+run_item_id,template_id,acceptance_variant_id,rep_id,provider,model,temperature,active_main_objective,later_side_topic_turn,acceptance_turn,arm_label,assistant_turn3_response,assistant_turn5_response,turn3_output_tokens,turn5_output_tokens,system_prompt_sha256,ran_at_utc
+PRA_A_main_r01,A_trip_planning,accept_main_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's stay with budget and schedule first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 🌍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once I have these details, I can put together a **detailed trip plan** with:
+- ✅ Day-by-day schedule
+- 💰 Budget breakdown
+- 🍽️ Restaurant recommendations
+
+Just share what you have in mind! 😊","Sure! Let's focus on those two. Just answer a few key questions:
+
+**Budget:**
+- What is your total budget?
+- Where are you traveling from and to?
+- How many people?
+
+**Schedule:**
+- What are your travel dates?
+- How many days is the trip?
+- Any must-do activities or places?
+
+Once I have these, I'll put together a clear **budget breakdown** and **day-by-day schedule** for you! 😊",222,109,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_main_r02,A_trip_planning,accept_main_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's stay with budget and schedule first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 🌍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once I have these details, I can put together a **detailed trip plan** with:
+- ✅ Day-by-day schedule
+- 💰 Budget breakdown
+- 🍽️ Restaurant recommendations
+
+Just share what you have in mind! 😊","Sure! Let's focus on those two. Just answer a few key questions:
+
+**Budget:**
+- What is your total budget?
+- Where are you traveling from and to?
+- How many people?
+
+**Schedule:**
+- What are your travel dates?
+- How many days is the trip?
+- Any must-do activities or places?
+
+Once I have these, I'll put together a clear **budget breakdown** and **day-by-day schedule** for you! 😊",222,109,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_main_r03,A_trip_planning,accept_main_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's stay with budget and schedule first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 🌍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once I have these details, I can put together a **detailed trip plan** with:
+- ✅ Day-by-day schedule
+- 💰 Budget breakdown
+- 🍽️ Restaurant recommendations
+
+Just share what you have in mind! 😊","Sure! Let's focus on those two. Just answer a few key questions:
+
+**Budget:**
+- What is your total budget?
+- Where are you traveling from and to?
+- How many people?
+
+**Schedule:**
+- What are the travel dates?
+- How many days is the trip?
+- Any must-do activities or places?
+
+Once I have these, I'll put together a **budget breakdown** and **day-by-day schedule** for you! 😊",222,108,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_main_r04,A_trip_planning,accept_main_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's stay with budget and schedule first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 🌍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once I have these details, I can put together a **detailed trip plan** covering:
+
+| Category | Details |
+|----------|---------|
+| 📅 Schedule | Day-by-day itinerary |
+| 💰 Budget | Estimated costs breakdown |
+| 🍽️ Restaurants | Recommended dining spots |
+
+Just share the details and we'll get started! 😊","Sure! Let's focus on those two first. 😊
+
+**Tell me about your trip:**
+
+- 🌍 **Destination** - Where are you going?
+- 📅 **Dates** - When and how long?
+- 👥 **Group size** - Traveling alone or with others?
+- 💰 **Budget** - What's your total budget or daily budget?
+
+Once I have these, I'll put together a **budget breakdown** and a **day-by-day schedule** for you!",252,122,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_side_r01,A_trip_planning,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's switch to restaurants first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 🌍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once I have these details, I can put together a **detailed trip plan** with:
+- ✅ Day-by-day schedule
+- 💰 Budget breakdown
+- 🍽️ Restaurant recommendations
+
+Just share what you have in mind! 😊","Sure! Let's focus on restaurants. 🍽️
+
+To give you the best recommendations, tell me:
+
+**Location:**
+- Which city/country are you visiting?
+
+**Food Preferences:**
+- Any favorite cuisines? (Italian, Japanese, local food, etc.)
+- Any dietary restrictions? (vegetarian, vegan, gluten-free, etc.)
+
+**Dining Style:**
+- Casual or fine dining?
+- Quick bites or sit-down meals?
+
+**Budget:**
+- How much are you willing to spend per meal per person?
+
+**Other Preferences:**
+- Romantic atmosphere? Family-friendly?
+- Popular tourist spots or hidden local gems?
+
+Share the details and I'll suggest some great options for you! 😊",222,170,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_side_r02,A_trip_planning,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's switch to restaurants first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 📍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once you share these details, I can put together a **detailed trip plan** with a budget breakdown, daily schedule, and restaurant recommendations! 🗺️✈️","Sure! Let's focus on restaurants. 🍽️
+
+To give you the best recommendations, tell me:
+
+- **Where** are you traveling to?
+- What **type of cuisine** are you interested in? (local, Italian, Asian, etc.)
+- What's your **budget per meal**? (budget-friendly, mid-range, fine dining)
+- Any **dietary restrictions** or preferences? (vegetarian, seafood, etc.)
+- Do you prefer **casual dining** or a more special atmosphere?
+
+Share the details and I'll suggest some great options! 😊",197,131,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_side_r03,A_trip_planning,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's switch to restaurants first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 📍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once you share these details, I can put together a **detailed trip plan** with a budget breakdown, daily schedule, and restaurant recommendations! 🗺️✈️","Sure! Let's focus on restaurants. 🍽️
+
+To give you the best recommendations, tell me:
+
+- **Where** are you traveling to?
+- What **type of cuisine** are you interested in? (local, Italian, Asian, etc.)
+- What's your **budget per meal**? (budget-friendly, mid-range, fine dining)
+- Any **dietary restrictions** or preferences? (vegetarian, seafood, etc.)
+- Do you prefer **casual dining** or a more special atmosphere?
+
+Share the details and I'll suggest some great options! 😊",197,131,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_A_side_r04,A_trip_planning,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the trip plan. The important things are budget and schedule.,I am also thinking about restaurants.,Let's switch to restaurants first.,baseline,"I'd love to help you plan your trip! To get started, I need a few details:
+
+**Basic Info:**
+- 📍 Where are you going?
+- 📅 When and how long is the trip?
+- 👥 How many people are traveling?
+
+**Budget:**
+- What is your **total budget**?
+- Any specific spending priorities? (accommodation, food, activities)
+
+**Schedule:**
+- Do you have any **must-see places** or activities in mind?
+- Do you prefer a packed itinerary or a relaxed pace?
+
+**Restaurants:**
+- Any **cuisine preferences** or dietary restrictions?
+- Are you looking for budget-friendly spots or fine dining?
+
+Once you share these details, I can put together a **detailed trip plan** with a budget breakdown, daily schedule, and restaurant recommendations! 🗺️✈️","Sure! Let's focus on restaurants. 🍽️
+
+To give you the best recommendations, tell me:
+
+- **Where** are you traveling to?
+- **What cuisine** do you enjoy? (local food, Italian, Japanese, etc.)
+- **Budget per meal** - are you thinking casual/budget-friendly or fine dining?
+- **Any dietary restrictions?** (vegetarian, allergies, etc.)
+- **Any special occasions?** (romantic dinner, family-friendly, etc.)
+
+Share the details and I'll suggest some great options! 😊",197,127,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_main_r01,B_hiring_packet,accept_main_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's focus on the hiring packet first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's nail down the hiring packet.
+
+**Two key things to work through:**
+
+**1. Required Documents**
+Do you already have templates for these, or do you need to build them from scratch? Also, are there any company-specific forms beyond the standard ones I listed?
+
+**2. Deadline**
+What's the new hire's start date? That will help us set a clear deadline for when all documents need to be completed and returned.
+
+What do you have so far?",236,108,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_main_r02,B_hiring_packet,accept_main_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's focus on the hiring packet first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's nail down the hiring packet.
+
+**Two key things to work through:**
+
+**1. Required Documents**
+Do you already have templates for these, or do you need to build them from scratch? Also, are there any company-specific forms beyond the standard ones I listed?
+
+**2. Deadline**
+What's the new hire's start date? That will help us set a clear deadline for when all documents need to be completed and returned.
+
+What do you have so far?",236,108,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_main_r03,B_hiring_packet,accept_main_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's focus on the hiring packet first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's nail down the hiring packet.
+
+**Two key things to work through:**
+
+**1. Required Documents**
+Do you already have templates for these, or do we need to build them from scratch? Also, are there any company-specific forms beyond the standard ones I listed?
+
+**2. Deadline**
+What's the new hire's start date? That way we can set a clear deadline for when all documents need to be completed and returned.
+
+What do you have so far?",236,108,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_main_r04,B_hiring_packet,accept_main_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's focus on the hiring packet first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's nail down the hiring packet.
+
+**Two key things to work through:**
+
+**1. Required Documents**
+Do you already have templates for these, or do we need to build them from scratch? Also, are there any company-specific forms beyond the standard ones I listed?
+
+**2. Deadline**
+What's the new hire's start date? That way we can set a clear deadline for when all documents need to be completed and returned.
+
+What do you have so far?",236,108,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_side_r01,B_hiring_packet,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's switch to onboarding training first.,baseline,"# Hiring Packet Preparation
+
+## Required Documents
+Here are the typical documents to include:
+
+- **Job offer letter** (signed by both parties)
+- **Employment contract**
+- **Tax forms** (W-4, I-9 for employment eligibility)
+- **Direct deposit authorization**
+- **Benefits enrollment forms**
+- **Company policies/handbook acknowledgment**
+- **Background check consent** (if applicable)
+- **Emergency contact form**
+
+## Deadline
+- Set a clear **return deadline** for all documents (commonly 3-5 days before start date)
+- Send a reminder 1-2 days before the deadline
+- Flag any missing documents immediately
+
+---
+
+## Onboarding Training Considerations
+
+- **Day 1** – Orientation, introductions, system access setup
+- **Week 1** – Role-specific training, team meetings, key processes
+- **30/60/90-day plan** – Milestones and check-ins to track progress
+- Assign a **buddy or mentor** for support
+- Include compliance/safety training as required
+
+---
+
+**A few questions to help refine this:**
+- What industry or role is this for?
+- Do you have existing templates, or are you building from scratch?
+- Is this for one hire or a recurring process?","# Onboarding Training
+
+Here are the key areas to think about:
+
+## Structure
+- **Pre-boarding** – Send welcome email, set up accounts/equipment before Day 1
+- **Day 1** – Orientation, office tour, introductions
+- **First week** – Core tools, processes, and team workflows
+- **30/60/90-day plan** – Gradual ramp-up with clear milestones
+
+## Content to Cover
+- Company culture, mission, and values
+- Role-specific responsibilities and expectations
+- Tools and systems training
+- Compliance and required policies
+- Key contacts and team structure
+
+## Delivery Methods
+- In-person sessions
+- Self-paced modules or videos
+- Shadowing/mentorship
+- Hands-on practice
+
+## Tracking Progress
+- Checklists for completed training
+- Regular check-ins with manager
+- Feedback from new hire on the experience
+
+---
+
+**A few questions to shape this further:**
+- Is this in-person, remote, or hybrid?
+- How long is your intended onboarding period?
+- Do you have existing training materials, or starting fresh?",294,258,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_side_r02,B_hiring_packet,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's switch to onboarding training first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's focus on onboarding training.
+
+A few things to think through:
+
+---
+
+**Key Areas to Cover**
+- Company culture, values, and policies
+- Role-specific skills and responsibilities
+- Tools and systems they'll be using
+- Team introductions and key contacts
+- Compliance and safety training (if applicable)
+
+---
+
+**Structure Options**
+- **Self-paced** – Videos, documents, modules they work through on their own
+- **Instructor-led** – Scheduled sessions with a trainer or manager
+- **Blended** – Mix of both
+
+---
+
+**Timeline**
+- Day 1 essentials vs. week 1 vs. first 30/60/90 days
+- Avoid overwhelming them on day one
+
+---
+
+**A few questions to help shape this:**
+1. What's the role? That affects how technical the training needs to be.
+2. How long do you want the onboarding period to be?
+3. Do you have existing training materials, or are we building from scratch?
+4. Who will be delivering the training — HR, a manager, a buddy/mentor?
+
+Let me know where you'd like to dig in!",236,266,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_side_r03,B_hiring_packet,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's switch to onboarding training first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's focus on onboarding training.
+
+A few things to think through:
+
+**Structure**
+- How long should the onboarding period be? (1 week, 30 days, 90 days?)
+- Will it be self-paced or guided by a manager/buddy?
+
+**Content Areas**
+- Company culture and values
+- Role-specific skills and tools
+- Policies and procedures
+- Team introductions and key contacts
+- Systems and software training
+
+**Format**
+- In-person, remote, or hybrid?
+- Live sessions vs. recorded/written materials?
+- Will you assign a mentor or onboarding buddy?
+
+**Checkpoints**
+- How will you track progress?
+- Any quizzes, sign-offs, or check-in meetings?
+
+---
+
+To help me build this out, it would help to know:
+1. **What's the role?**
+2. **Is this for one hire or a repeatable process?**
+3. **Do you have any existing training materials?**
+
+Share what you have and we can start putting it together!",236,247,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_B_side_r04,B_hiring_packet,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the hiring packet. The important things are required documents and the deadline.,I also want to think about onboarding training.,Let's switch to onboarding training first.,baseline,"Here's a quick outline to get you started:
+
+---
+
+**Hiring Packet**
+
+**Required Documents**
+- Offer letter
+- Employment contract
+- Tax forms (W-4, I-9, etc.)
+- Direct deposit form
+- Benefits enrollment forms
+- Background check authorization
+- Emergency contact form
+- Employee handbook acknowledgment
+
+**Deadline**
+- What's your target start date? I can help you work backward to set deadlines for each document.
+
+---
+
+**Onboarding Training**
+A few areas to consider:
+- **Day 1** – Orientation, system access, introductions
+- **Week 1** – Role-specific training, key processes
+- **30/60/90 days** – Check-ins and milestone goals
+
+---
+
+**A few questions to help me refine this:**
+1. What's the role and start date?
+2. Do you have existing templates for any of these documents?
+3. Is training in-person, remote, or hybrid?
+
+Let me know and I can make this more specific!","Sure! Let's focus on onboarding training.
+
+A few things to think through:
+
+**Structure**
+- How long should the onboarding period be? (1 week, 30 days, 90 days?)
+- Will it be self-paced or guided by a manager/mentor?
+
+**Content Areas**
+- Company culture and values
+- Role-specific skills and tools
+- Policies and procedures
+- Team introductions and key contacts
+- Systems and software training
+
+**Format**
+- In-person, remote, or hybrid?
+- Live sessions vs. recorded/written materials?
+- Will you assign a buddy or mentor?
+
+**Checkpoints**
+- How will you track progress?
+- Any quizzes, sign-offs, or check-in meetings?
+
+---
+
+To help you build this out, it would help to know:
+1. **What's the role?** (The training content will vary a lot)
+2. **Is this a new position or a backfill?** (Existing materials may already exist)
+3. **How hands-on do you want the manager to be?**
+
+What direction do you want to go?",236,261,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_main_r01,C_incident_response,accept_main_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's stay with the incident-response plan first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** clearly so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 30 min | Within 15 min |
+| L3 | Engineering Manager | Major outage / data loss | Within 10 min |
+| L4 | Executive / VP | Customer-facing P1 / breach | Within 5 min |
+
+**Key details to capture per contact:**
+- Primary phone + backup phone
+- Slack/Teams handle
+- Time zone and working hours
+- Backup contact if unavailable
+
+---
+
+## Response Timing
+
+A common framework based on **severity levels:**
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage / data breach | 5 min | 30 min | 4 hours |
+| P2 - High | Major feature broken | 15 min | 1 hour | 8 hours |
+| P3 -","Sure! Let's focus on the incident-response plan.
+
+Where would you like to dig in first — **escalation contacts** or **response timing**? Or do you have specific gaps or constraints you're working around, like team size, on-call rotation, or severity definitions?",300,62,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_main_r02,C_incident_response,accept_main_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's stay with the incident-response plan first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 15 min | 15 minutes |
+| L3 | Engineering Manager | Major outage / data loss | 30 minutes |
+| L4 | VP / Executive | Customer-facing P1 / PR risk | 1 hour |
+
+**Fill in for your team:**
+- Primary on-call rotation tool (PagerDuty, OpsGenie, etc.)
+- Backup contacts for each role
+- External contacts (vendors, security, legal)
+
+---
+
+## Response Timing
+
+A common framework based on **severity**:
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage, data loss | 5 min | 1 hour | 4 hours |
+| P2 - High | Major feature broken | 15 min | 4 hours | 24","Sure. Let's focus on the incident-response plan.
+
+Where do you want to start - **escalation contacts** or **response timing**? Or do you already have some details you want to plug in, like your team structure or severity definitions?",300,55,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_main_r03,C_incident_response,accept_main_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's stay with the incident-response plan first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 15 min | 15 minutes |
+| L3 | Engineering Manager | Major outage / data loss | 30 minutes |
+| L4 | VP / Executive | Customer-facing P1 / PR risk | 1 hour |
+
+**Fill in for your team:**
+- Primary on-call rotation tool (PagerDuty, OpsGenie, etc.)
+- Backup contacts for each role
+- External contacts (vendors, security, legal)
+
+---
+
+## Response Timing
+
+A common framework based on **severity levels:**
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage, data loss | 5 min | 1 hour | 4 hours |
+| P2 - High | Major feature broken | 15 min | 4 hours | 24","Sure. Let's focus on the incident response plan.
+
+To make it useful, a few quick questions:
+
+- **What kind of system** are you protecting? (web app, internal tool, infrastructure, etc.)
+- **How big is your team?** That affects how many escalation tiers make sense.
+- **Do you already have an on-call tool** like PagerDuty or OpsGenie, or is it more manual right now?
+
+That way I can tailor the escalation contacts and response timing to your actual situation rather than giving you a generic template.",300,128,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_main_r04,C_incident_response,accept_main_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's stay with the incident-response plan first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** clearly:
+
+| Level | Who | When to Contact | How |
+|-------|-----|-----------------|-----|
+| L1 | On-call engineer | First alert triggers | PagerDuty / Slack |
+| L2 | Team lead / senior engineer | Not resolved in 15 min | Phone / page |
+| L3 | Engineering manager | Major impact / 30 min | Phone |
+| L4 | VP / Exec | Customer-facing outage / P0 | Phone + email |
+
+**Fill in:**
+- Primary + backup contacts for each role
+- Time zones and working hours
+- Escalation if someone is unreachable
+
+---
+
+## Response Timing
+
+A common framework:
+
+| Priority | Definition | Acknowledge | Start Response | Resolve Target |
+|----------|------------|-------------|----------------|----------------|
+| P0 | Full outage | 5 min | 15 min | 1 hour |
+| P1 | Major degradation | 10 min | 30 min | 4 hours |
+| P2 | Partial impact | 30 min | 2 hours | 24 hours |
+| P3 | Minor / cosmetic | 2 hours","Sure. Let's focus on the incident response plan.
+
+Where do you want to pick up? A few directions we could go:
+
+- **Escalation contacts** - flesh out the tiers, define who specifically fills each role, backup contacts
+- **Response timing** - refine the P0-P3 definitions and SLA targets to fit your team
+- **Incident classification** - how you decide what severity level an incident is
+- **Response process** - the actual steps an on-call engineer follows when an alert fires
+
+What fits your situation best, or is there a specific gap you want to fill?",300,134,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_side_r01,C_incident_response,accept_side_first,1,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's switch to the postmortem format first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** clearly so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 30 min | Within 15 min |
+| L3 | Engineering Manager | Major outage / data loss | Within 10 min |
+| L4 | Executive / VP | Customer-facing P1 / breach | Within 5 min |
+
+**Key details to capture per contact:**
+- Primary phone + backup phone
+- Slack/Teams handle
+- Time zone and working hours
+- Backup contact if unavailable
+
+---
+
+## Response Timing
+
+A common framework based on **severity levels:**
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage / data breach | 5 min | 30 min | 4 hours |
+| P2 - High | Major feature broken | 15 min | 1 hour | 8 hours |
+| P3 -","# Postmortem Format
+
+Here's a solid structure that balances thoroughness with readability:
+
+---
+
+## 1. Incident Summary
+- **Date/Time** of incident and resolution
+- **Duration** of impact
+- **Severity level**
+- **Services affected**
+- One or two sentence **plain-language summary**
+
+---
+
+## 2. Timeline
+A chronological log of key events:
+- When the issue started
+- When it was detected
+- Key actions taken
+- When it was resolved
+
+> Keep it factual, no blame language
+
+---
+
+## 3. Root Cause
+- What actually caused the incident
+- Contributing factors
+- Why existing safeguards didn't catch it
+
+---
+
+## 4. Impact
+- Users/customers affected
+- Revenue or SLA impact
+- Data loss or security implications
+
+---
+
+## 5. What Went Well
+- Detection that worked
+- Good team coordination
+- Tools that helped
+
+---
+
+## 6. What Went Wrong
+- Gaps in monitoring
+- Process failures
+- Communication breakdowns
+
+---
+
+## 7. Action Items
+| Action | Owner | Due Date | Priority |
+|--------|-------|----------|----------|
+| Fix X | Name | Date | High |
+
+---
+
+## A Few Tips
+- Write it **within 48-72 hours** while memory is",300,300,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_side_r02,C_incident_response,accept_side_first,2,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's switch to the postmortem format first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 15 min | 15 minutes |
+| L3 | Engineering Manager | Major outage / data loss | 30 minutes |
+| L4 | VP / Executive | Customer-facing P1 / breach | 1 hour |
+
+**Fill in for your team:**
+- Primary on-call rotation tool (PagerDuty, OpsGenie, etc.)
+- Backup contacts for each role
+- External contacts (cloud vendor support, security team, legal)
+
+---
+
+## Response Timing (by Severity)
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage / data breach | 5 min | 30 min | 4 hours |
+| P2 - High | Major feature broken | 15 min | 1 hour | 8 hours |","# Postmortem Format
+
+## Recommended Structure
+
+### 1. Header
+- **Incident ID / Title**
+- **Date & Duration**
+- **Severity**
+- **Author(s)**
+- **Status** (Draft / In Review / Final)
+
+---
+
+### 2. Summary
+One or two sentences. What happened, what was the impact, how was it resolved.
+
+---
+
+### 3. Timeline
+Chronological list of key events.
+- When was it detected?
+- When was escalation triggered?
+- When was mitigation applied?
+- When was full resolution confirmed?
+
+---
+
+### 4. Root Cause
+Clear, honest explanation of **why** it happened. Avoid blame — focus on systems and processes.
+
+---
+
+### 5. Impact
+- Users/customers affected
+- Duration of impact
+- Data loss or financial impact if applicable
+
+---
+
+### 6. What Went Well
+Don't skip this — it reinforces good practices.
+
+---
+
+### 7. What Went Wrong
+Honest assessment of failures in process, tooling, or communication.
+
+---
+
+### 8. Action Items
+| Action | Owner | Due Date |
+|--------|-------|----------|
+| Fix X | Name | Date |
+
+---
+
+## Key Principles
+- **Blameless** — focus on systems, not people",299,300,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_side_r03,C_incident_response,accept_side_first,3,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's switch to the postmortem format first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 15 min | 15 minutes |
+| L3 | Engineering Manager | Major outage / data loss | 30 minutes |
+| L4 | VP / Executive | Customer-facing P1 / PR risk | 1 hour |
+
+**Fill in for each tier:**
+- Name & backup name
+- Phone / Slack / PagerDuty handle
+- Working hours vs. after-hours contact method
+
+---
+
+## Response Timing (by Severity)
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| **P1 - Critical** | Full outage, data loss | 5 min | 30 min | 4 hours |
+| **P2 - High** | Major feature broken | 15 min | 1 hour | 8 hours |
+| **P3 - Medium** |","# Postmortem Format
+
+## Suggested Structure
+
+### 1. Header
+- **Incident ID / Title**
+- **Date & Duration**
+- **Severity** (P1/P2/P3)
+- **Author & Reviewers**
+
+---
+
+### 2. Executive Summary
+- 2-3 sentences max
+- What broke, how long, what was the impact
+- Written for non-technical stakeholders
+
+---
+
+### 3. Timeline
+- Chronological list of key events
+- Include: detection, escalation, mitigation, resolution
+- Use UTC timestamps
+
+---
+
+### 4. Root Cause Analysis
+- **Immediate cause** - what directly triggered the incident
+- **Contributing factors** - what allowed it to happen
+- Avoid blame, focus on systems and processes
+
+---
+
+### 5. Impact
+- Users/customers affected
+- Revenue or SLA impact
+- Data loss or security implications
+
+---
+
+### 6. Action Items
+| Action | Owner | Due Date | Status |
+|--------|-------|----------|--------|
+| Fix X | @name | Date | Open |
+
+---
+
+### 7. Lessons Learned
+- What went well
+- What didn't
+- What would you do differently
+
+---
+
+## A Few Tips
+- **Write it within 48-72 hours** while memory is",300,300,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z
+PRA_C_side_r04,C_incident_response,accept_side_first,4,anthropic,claude-sonnet-4-6,0.0,Help me prepare the incident-response plan. The important things are escalation contacts and response timing.,I am also thinking about the postmortem format.,Let's switch to the postmortem format first.,baseline,"# Incident Response Plan
+
+## Escalation Contacts
+
+You'll want to define **tiers** so people know exactly who to call and when:
+
+| Tier | Role | When to Contact | Response Time |
+|------|------|-----------------|---------------|
+| L1 | On-call Engineer | First alert triggers | Immediate |
+| L2 | Team Lead / Senior Engineer | L1 can't resolve in 15 min | 15 minutes |
+| L3 | Engineering Manager | Major outage / data loss | 30 minutes |
+| L4 | VP / Executive | Customer-facing P1 / breach | 1 hour |
+
+**Fill in for your team:**
+- Primary on-call rotation tool (PagerDuty, OpsGenie, etc.)
+- Backup contacts for each role
+- External contacts (cloud vendor support, security team, legal)
+
+---
+
+## Response Timing (by Severity)
+
+| Severity | Definition | Acknowledge | Mitigate | Resolve |
+|----------|------------|-------------|----------|---------|
+| P1 - Critical | Full outage / data breach | 5 min | 30 min | 4 hours |
+| P2 - High | Major feature broken | 15 min | 1 hour | 8 hours |","# Postmortem Format
+
+## Recommended Structure
+
+### 1. Header
+- **Incident ID / Title**
+- **Date & Duration**
+- **Severity Level**
+- **Author & Reviewers**
+
+---
+
+### 2. Summary
+- 2-3 sentence plain-language description
+- What broke, who was affected, how long
+
+---
+
+### 3. Timeline
+- Chronological list of key events
+- Include detection, escalation, mitigation, resolution
+- Use UTC timestamps
+
+---
+
+### 4. Root Cause Analysis
+- The **actual cause**, not just symptoms
+- Use **5 Whys** or fishbone diagram if helpful
+
+---
+
+### 5. Impact
+- Users/customers affected
+- Revenue or SLA impact
+- Data loss or security implications
+
+---
+
+### 6. What Went Well
+- Honest positives - detection speed, team response, tooling
+
+---
+
+### 7. What Went Wrong
+- Gaps in monitoring, process, communication
+
+---
+
+### 8. Action Items
+| Action | Owner | Due Date | Status |
+|--------|-------|----------|--------|
+| Fix X | @name | Date | Open |
+
+---
+
+## Key Principles
+- **Blameless** - focus on systems and processes
+- **Time-boxed** - write it",299,300,68175a85868e30e9c1f60f1a7b00b768508a5738b4040f3ce0f0f3c829320563,2026-03-17T10:57:20Z

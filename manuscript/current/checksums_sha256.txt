@@ -1,0 +1,2 @@
+fafd1f6a137da46c45a9b627805386911ebf9c9f5969a1c45fdb13812864ae3f  nrr-energy_manuscript_v9.tex
+d8c060eae118f366e269fb13000711237fcbecead6a23a78a828fae70f012e47  nrr-energy_manuscript_v9.pdf
