@@ -16,15 +16,17 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Source: `manuscript/current/nrr-energy_manuscript_v26.tex`
-- PDF: `manuscript/current/nrr-energy_manuscript_v26.pdf`
-- Repo-local working markdown draft retained outside the current review package: `manuscript/current/nrr-energy_manuscript_draft_v0_5_2026-03-19.md`
-- Checksum manifest: `manuscript/current/checksums_sha256.txt`
+- Source: `manuscript/current/nrr-energy_manuscript_v28.tex`
+- PDF: `manuscript/current/nrr-energy_manuscript_v28.pdf`
+- Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
+- Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
+- `manuscript/current/` is latest-only and keeps only the active manuscript `.tex` / `.pdf` pair for this repo surface.
 
 ## Reproducibility entry points
 
 - Review-package guide: `reproducibility.md`
 - Build current manuscript package: `bash scripts/build_current_manuscript.sh`
+- Verify active review surface: `bash scripts/verify_active_review_surface.sh`
 - Verify current manuscript checksum package: `bash scripts/verify_current_package.sh`
 - Verify Step 3 closure contract on the repo surface: `bash scripts/verify_step3_closure_contract.sh`
 - Verify Step 3 closure contract on an unpacked review package: `bash scripts/verify_step3_closure_contract.sh /path/to/unpacked_review_root`
@@ -111,15 +113,16 @@ nrr-energy/
 |-- LICENSE
 |-- reproducibility.md
 |-- manuscript/
+|   |-- checksums_active_review_surface_sha256.txt
+|   |-- checksums_current_package_sha256.txt
 |   `-- current/
-|       |-- nrr-energy_manuscript_v26.tex
-|       |-- nrr-energy_manuscript_v26.pdf
-|       `-- nrr-energy_manuscript_draft_v0_5_2026-03-19.md  # repo-local, not shipped in the review package
-|       `-- checksums_sha256.txt
+|       |-- nrr-energy_manuscript_v28.tex
+|       `-- nrr-energy_manuscript_v28.pdf
 |-- results/
 |   `-- analysis/
 |-- scripts/
 |   |-- build_current_manuscript.sh
+|   |-- verify_active_review_surface.sh
 |   |-- verify_current_package.sh
 |   `-- recompute_evidence.sh
 `-- stats/
@@ -133,6 +136,7 @@ nrr-energy/
 ## Stable review-package entrypoints
 
 - `bash scripts/build_current_manuscript.sh`
+- `bash scripts/verify_active_review_surface.sh`
 - `bash scripts/verify_current_package.sh`
 - `bash scripts/verify_step3_closure_contract.sh`
 - `bash scripts/build_current_review_package.sh`

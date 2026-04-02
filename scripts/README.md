@@ -7,8 +7,10 @@ research and runtime helpers used by the current Energy line.
 
 - `build_current_manuscript.sh`
   - builds the current TeX manuscript to a temp output directory
+- `verify_active_review_surface.sh`
+  - verifies that `manuscript/current/` contains only the current `.tex` and `.pdf` pair and checks `manuscript/checksums_active_review_surface_sha256.txt`
 - `verify_current_package.sh`
-  - verifies `manuscript/current/checksums_sha256.txt`
+  - verifies the active review surface first and then checks `manuscript/checksums_current_package_sha256.txt`
 - `verify_step3_closure_contract.sh`
   - verifies the current manuscript/package contract on the repo surface or an unpacked review package
 - `build_current_review_package.sh`
@@ -39,4 +41,4 @@ Environment note:
 - review of the shipped package does not require any provider key files or local env helper scripts
 
 These helpers are retained as part of the Energy research surface, but the
-stable public review-package interface is the five entrypoints listed above.
+stable public review-package interface is the six entrypoints listed above.

@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-DATE_TAG="2026-04-02"
-MANUSCRIPT_BASENAME="nrr-energy_manuscript_v26"
+DATE_TAG="2026-04-03"
+MANUSCRIPT_BASENAME="nrr-energy_manuscript_v28"
 PACKAGE_VERSION="v1"
-PACKAGE_BASENAME="ENERGY_V26_TEX_AND_EXPERIMENT_SURFACE_${DATE_TAG}_${PACKAGE_VERSION}"
+PACKAGE_BASENAME="ENERGY_V28_CURRENT_SURFACE_${DATE_TAG}_${PACKAGE_VERSION}"
 
 PAPER7_ROOT="/Users/saitokei/Documents/New project/nrr-principles/manuscript/current"
 ARCHIVE_SUBDIR="2026-04-01_superseded_side_topic_quarantine_v1"
 
 STABLE_REVIEW_ENTRYPOINTS=(
   "build_current_manuscript.sh"
+  "verify_active_review_surface.sh"
   "verify_current_package.sh"
   "verify_step3_closure_contract.sh"
   "build_current_review_package.sh"
@@ -23,6 +24,7 @@ SCRIPT_FILES=(
   "rebuild_all.sh"
   "recompute_evidence.sh"
   "review_package_contract.sh"
+  "verify_active_review_surface.sh"
   "verify_current_package.sh"
   "verify_step3_closure_contract.sh"
 )

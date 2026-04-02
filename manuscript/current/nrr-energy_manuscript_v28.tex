@@ -8,6 +8,7 @@
 \usepackage[numbers]{natbib}
 \usepackage{listings}
 \usepackage{tabularx}
+\usepackage{xurl}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 \geometry{
@@ -16,16 +17,18 @@
   top=2.5cm,
   bottom=2.5cm
 }
+\setlength{\emergencystretch}{3em}
 
 \title{\textbf{NRR-Energy: Calibration of Commit/Defer Utility\\Under Existing Paired Inputs}}
 
 \author{
-  Kei Saito\thanks{ORCID: 0009-0006-4715-9176} \\
+  Kei Saito \\
   Independent Researcher, Japan \\
+  ORCID: 0009-0006-4715-9176 \\
   \texttt{kei.saito.research@gmail.com}
 }
 
-\date{April 2026 \\[0.5em]
+\date{April 3, 2026 \\[0.5em]
 \textit{Part of the Non-Resolution Reasoning (NRR) research program.}}
 
 \begin{document}
@@ -63,10 +66,12 @@ task-level utility construction rather than a direct classifier confidence.
 NRR is not an anti-LLM framework.
 NRR does not replace standard LLM use.
 NRR optimizes when to commit and when to defer, under explicit conditions.
-NRR is a derivation-and-evaluation framework, not a closed recipe; the current operator and condition set is an evaluated set under tested conditions, not an exhaustive set.
 
 \textbf{Series Consistency Statement:}
 At this evidence state, unsupported interpretations are not injected, hypothesis-set expansion is evidence-gated, and unobserved possibilities remain explicitly unresolved.
+
+\textbf{Series Extensibility Statement:}
+NRR is a derivation-and-evaluation framework, not a closed recipe; the current operator and condition set is an evaluated set under tested conditions, not an exhaustive set.
 
 \subsection{Contributions}
 
@@ -98,16 +103,16 @@ The current split instantiation uses calibration rows from reps 1 and 2 and test
 Each dataset row is keyed by
 \((\mathrm{dataset}, \mathrm{provider}, \mathrm{pattern}, \mathrm{scenario\_id}, \mathrm{rep}, \mathrm{temperature})\).
 For a keyed row to enter the Energy table, the pair-metrics CSV must contain both
-the \texttt{misinterpretation\_rate} and \texttt{rework\_cost\_tokens} entries and
-the row must satisfy \texttt{tau\_trace\_pass = True}.
+the \path{misinterpretation_rate} and \path{rework_cost_tokens} entries and
+the row must satisfy \path{tau_trace_pass = True}.
 
 We then define a quality term and three cost terms directly from the shipped
 artifacts:
 \begin{itemize}
-  \item $Q =$ the \texttt{improvement} value from the
-  \texttt{misinterpretation\_rate} row in \texttt{mst\_pair\_metrics.csv}
-  \item $C_{\mathrm{gross}} =$ the \texttt{improvement} value from the
-  \texttt{rework\_cost\_tokens} row in \texttt{mst\_pair\_metrics.csv}
+  \item $Q =$ the \path{improvement} value from the
+  \path{misinterpretation_rate} row in \path{mst_pair_metrics.csv}
+  \item $C_{\mathrm{gross}} =$ the \path{improvement} value from the
+  \path{rework_cost_tokens} row in \path{mst_pair_metrics.csv}
   \item $\mathrm{overhead}_{\mathrm{output}} =$ total pattern-arm output tokens
   minus total baseline-arm output tokens reconstructed from the matched raw JSON
   pair under the same keyed row
@@ -308,6 +313,26 @@ A fourth boundary comes from the first covered forward checks. Exact replay and 
 
 A fifth boundary is scope. Downstream `Policy-Verification` materials shipped in the repository are bounded handoff references for later validation work, not closed Energy paper-level evidence claims. They are useful for tracing how the calibration/control layer connects to later operational checks, but they do not widen the present paper into a downstream policy-superiority or later-horizon closure result.
 
+\section{Limitations}
+\label{sec:limitations}
+
+The present evaluation remains a calibration-side internal consistency check
+rather than a prospective paired policy test. The current oracle labels are
+derived from calibration-split mean $\Delta U$ signs, so the evidence supports
+reproducible calibration and boundary reporting under the tested setup but does
+not by itself authorize online policy-improvement claims.
+
+The implementation-gated forward surface is also intentionally narrow. The
+shipped Stage A path is operational on the tested covered slices, but the
+routed shared-prefix readout is not treated here as a direct grounded-state-quality
+measure, and the forward package closes at the shipped summary-memo surface
+rather than at a full raw rerun or audit export.
+
+Downstream `Policy-Verification` materials remain bounded handoff references for
+later validation work. They trace how the Energy calibration/control layer
+connects to later operational checks, but they are not part of the core Energy
+paper-level evidence claim closed in this manuscript.
+
 \section{Conclusion}
 \label{sec:conclusion}
 
@@ -323,7 +348,7 @@ shipped summary-memo surface rather than at a complete raw-payload or audit expo
 \section{Reproducibility}
 \label{sec:repro}
 
-Current manuscript-side artifacts shipped in the current review surface:
+Current manuscript-side artifacts on the repository current package surface are:
 \begin{itemize}
   \item \texttt{stats/evidence/energy\_e1\_delta\_u\_table\_v1\_1.csv}
   \item \texttt{stats/evidence/energy\_e1\_cost\_variant\_audit\_v1.csv}
@@ -346,7 +371,7 @@ Current manuscript-side artifacts shipped in the current review surface:
   \item \path{results/analysis/energy_policy_verification_side_topic_quarantine_baseline_vs_revised_energy_policy_comparison_memo_v2_2026-03-18.md}
 \end{itemize}
 
-The shipped Stage A implementation-trial summary memo is accompanied by its
+On the repository current package surface, the shipped Stage A implementation-trial summary memo is accompanied by its
 directly linked audit, freeze-gate, freeze-manifest, and calibration-bundle
 artifacts for the four routed runs. The shipped downstream comparison memos
 are accompanied by their linked run-annotation CSVs and authorized run-output
@@ -361,11 +386,14 @@ For the current draft state, vendored calibration inputs are stored under:
   \item \texttt{stats/raw\_combo\_rep3\_all/}
 \end{itemize}
 
-The current review surface ships the Stage A implementation-trial summary
-together with its directly linked local support artifacts. Later forward
+The repository current package surface ships the Stage A implementation-trial summary
+together with its directly linked local support artifacts. The review-drop
+handoff used for external review may contain only the current manuscript source,
+while the repository current package retains the broader reproducibility layer.
+Later forward
 boundary evidence remains summary-memo level only. Some historical forward raw
 payload, audit, bundle, and decision-context files referenced by the later
-forward summary memos are not retained inside the current review surface, so
+forward summary memos are not retained inside the repository current package, so
 the exact-replay counts reported above are package-supported here at the
 shipped summary-memo layer rather than at a full raw rerun or audit export.
 
@@ -378,6 +406,17 @@ reuse is an Energy-side calibration extension from the same frozen Boundary-deri
 snapshot rather than part of that fixed paper7 authority contract. Detailed historical
 source and copy provenance are recorded in the reproducibility note rather than treated
 as part of the manuscript-facing role explanation.
+The fixed upstream authority artifact for this handoff is
+\path{paper7_integrated_manuscript_v0_29_2026-04-01.tex} with companion checksum
+manifest \path{paper7_integrated_checksums_sha256.txt}, as recorded in
+\path{results/analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md}.
+
+\section*{Acknowledgments}
+
+The author acknowledges language refinement, formatting support, and
+proofreading assistance from Claude (Anthropic), ChatGPT/Codex (OpenAI), and
+Gemini (Google). All claims, judgments, and final decisions in this manuscript
+remain solely the responsibility of the author.
 
 \begin{thebibliography}{99}
 \raggedright
@@ -385,40 +424,36 @@ as part of the manuscript-facing role explanation.
 \bibitem{saito2025nrr}
 K.~Saito,
 \newblock ``NRR-Core: Non-Resolution Reasoning as a Computational Framework for Contextual Identity and Ambiguity Preservation,''
-\newblock \emph{arXiv preprint arXiv:2512.13478}, 2025.
+\newblock \emph{arXiv:2512.13478}, 2025.
 
 \bibitem{saito2026phi}
 K.~Saito,
 \newblock ``NRR-Phi: Text-to-State Mapping for Ambiguity Preservation in LLM Inference,''
-\newblock \emph{arXiv preprint arXiv:2601.19933}, 2026.
+\newblock \emph{arXiv:2601.19933}, 2026.
 
 \bibitem{saito2026ime}
 K.~Saito,
 \newblock ``NRR-IME: Interface Decomposition for Stable State Transitions on Stateless LLM APIs,''
-\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
-\path{manuscript/current/paper4-nrr-ime-v67.tex}. \url{https://github.com/kei-saito-research/nrr-ime/tree/99f5ebbbc3e854b575f95b2e70ef65686a44ba4d}.
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/nrr-ime}.
 
 \bibitem{saito2026transfer}
 K.~Saito,
 \newblock ``Cross-Task Parser/Update Reuse of a Fixed Hidden-State Operator-Target Interface on Stateless LLM APIs,''
-\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
-\path{manuscript/current/paper5-nrr-transfer-v123.tex}. \url{https://github.com/kei-saito-research/hidden-state-interface-reuse/tree/24bd24ea183f282cf535205ca4447e8169bac3b0}.
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/hidden-state-interface-reuse}.
 
 \bibitem{saito2026coupled}
 K.~Saito,
 \newblock ``NRR-Coupled (cp): Dependency-Consistency Evaluation for Coupled State Updates,''
-\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
-\path{manuscript/current/paper6-nrr-coupled-v21.tex}.
-\url{https://github.com/kei-saito-research/nrr-coupled/tree/aab7cc500acc413d4f585c8a50a9045cb5477eb5}.
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/nrr-coupled}.
 
 \bibitem{saito2026principles}
 K.~Saito,
 \newblock ``NRR-Patterns: Condition-Bounded Comparison of Five Delayed-Commitment Patterns in Stateful LLM Systems,''
-\newblock Fixed manuscript snapshot used for the current upstream role:
-\path{manuscript/current/paper7_integrated_manuscript_v0_29_2026-04-01.tex}
-with companion checksum manifest
-\path{manuscript/current/paper7_integrated_checksums_sha256.txt}.
-Current repository surface: \url{https://github.com/kei-saito-research/nrr-principles} (accessed 2026-04-01).
+\newblock Unpublished manuscript. Repository surface:
+\url{https://github.com/kei-saito-research/nrr-patterns}.
 
 \bibitem{guo2017calibration}
 C.~Guo, G.~Pleiss, Y.~Sun, and K.~Q. Weinberger,

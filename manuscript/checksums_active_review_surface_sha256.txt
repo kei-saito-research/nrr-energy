@@ -1,0 +1,2 @@
+5db2e7a816876a8547d24e7736610af2f6e5acd2649fbc1cc1c21b929da225b8  manuscript/current/nrr-energy_manuscript_v28.tex
+5e511fe7121873487fcba92fa1e1e473b0a543d51f23d6a4804d5928df475df5  manuscript/current/nrr-energy_manuscript_v28.pdf

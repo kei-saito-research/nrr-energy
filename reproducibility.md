@@ -10,7 +10,9 @@ handoff artifacts needed to reproduce the current handoff-ready Energy line.
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v26.pdf`
+  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v28.pdf`
+- Verify the active review surface:
+  - `bash scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
 - Verify the Step 3 closure contract on the repo surface:
@@ -24,20 +26,21 @@ handoff artifacts needed to reproduce the current handoff-ready Energy line.
 
 ## Current review package
 
-- Main TeX: `manuscript/current/nrr-energy_manuscript_v26.tex`
-- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v26.pdf`
-- Checksum manifest: `manuscript/current/checksums_sha256.txt`
-- Repo-local working markdown draft retained outside the current review surface:
-  - `manuscript/current/nrr-energy_manuscript_draft_v0_5_2026-03-19.md`
+- Main TeX: `manuscript/current/nrr-energy_manuscript_v28.tex`
+- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v28.pdf`
+- Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
+- Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
+- `manuscript/current/` is latest-only and contains only the active manuscript `.tex` / `.pdf` pair.
 
 ## Checksum policy
 
-- `manuscript/current/checksums_sha256.txt` covers the tracked files that define the
-  current review package for the latest manuscript line in `manuscript/current/`.
-- Coverage includes the current main `.tex` file and the committed current `.pdf`.
-- Coverage excludes `checksums_sha256.txt` itself, the repo-local working markdown draft,
-  older manuscript versions that may remain for local continuity, and repo-specific
-  artifacts outside `manuscript/current/` unless a separate manifest is provided.
+- `manuscript/checksums_active_review_surface_sha256.txt` covers the active review
+  surface and is limited to the committed current `.tex` / `.pdf` pair in
+  `manuscript/current/`.
+- `manuscript/checksums_current_package_sha256.txt` covers the repo-surface package
+  needed to verify the current manuscript line and its stable entrypoints.
+- Older manuscript versions and local working drafts are not retained in
+  `manuscript/current/`; version history is tracked through git history.
 
 ## Bundled evidence surface
 
@@ -119,14 +122,14 @@ If they are intentionally revised later, record a new source note rather than si
 
 ## Forward Summary Surface Note
 
-- The current review surface ships the Stage A implementation-trial summary together
+- The repository current package ships the Stage A implementation-trial summary together
   with its directly linked audit, freeze-gate, freeze-manifest, and calibration-bundle
   artifacts for the four routed runs.
 - The shipped Stage A audit memos reference package-local condition-metadata CSVs and
   the shipped `energy_e1_tau_summary_v1_1.csv` via relative paths only.
 - Later forward evidence is shipped at the summary-memo level.
 - Some historical forward raw payload, audit, bundle, and decision-context files referenced during
-  the original execution are not retained in the current review surface.
+  the original execution are not retained in the repository current package.
 - In the shipped surface, later forward-package closure is therefore defined at the
   summary-memo layer rather than as a complete raw rerun or audit export.
 
@@ -149,12 +152,13 @@ but they are not part of the current review-package authority surface.
 
 | Artifact | Command | Output |
 |---|---|---|
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v26.pdf` |
-| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v28.pdf` |
+| Active review surface verification | `bash scripts/verify_active_review_surface.sh` | stdout verification for `manuscript/checksums_active_review_surface_sha256.txt` plus latest-only checks on `manuscript/current/` |
+| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/checksums_current_package_sha256.txt` |
 | Step 3 closure contract verification | `bash scripts/verify_step3_closure_contract.sh` | stdout pass/fail for repo-side Step 3 closure preflight |
 | Current review package build | `bash scripts/build_current_review_package.sh` | zip path for the current allowlisted review package |
 | Energy evidence recomputation | `bash scripts/recompute_evidence.sh` | refreshed `stats/evidence/energy_e1_*` and `stats/evidence/energy_e2_sensitivity_summary_v1.csv` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v26.tex` |
+| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v28.tex` |
 
 ## Scope caveat
 
@@ -162,6 +166,6 @@ but they are not part of the current review-package authority surface.
 - Broader prospective `baseline vs Energy policy` validation is downstream-owned by `Policy-Verification`.
 - Shipped downstream `Policy-Verification` materials are bounded handoff references for later validation work; they are not core manuscript evidence claims of the Energy paper.
 - The linked run-annotation CSVs and authorized 2026-03-17 run-output directories for the shipped downstream comparison memos, including the repaired side-topic/quarantine reruns, are included in the review package.
-- The current review surface is not a full rerun export for every historical forward execution file.
+- The repository current package is not a full rerun export for every historical forward execution file.
 - Superseded malformed-input side-topic/quarantine `v1` readouts are archived out of
   the current manuscript-facing surface and should not be used as current evidence.

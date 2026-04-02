@@ -16,8 +16,8 @@ cp "$ROOT/README.md" "$STAGE_DIR/README.md"
 cp "$ROOT/reproducibility.md" "$STAGE_DIR/reproducibility.md"
 cp "$ROOT/LICENSE" "$STAGE_DIR/LICENSE"
 cp "$ROOT/results/README.md" "$STAGE_DIR/results/README.md"
-cp "$ROOT/manuscript/current/README.md" "$STAGE_DIR/manuscript/current/README.md"
-cp "$ROOT/manuscript/current/checksums_sha256.txt" "$STAGE_DIR/manuscript/current/checksums_sha256.txt"
+cp "$ROOT/manuscript/checksums_active_review_surface_sha256.txt" "$STAGE_DIR/manuscript/checksums_active_review_surface_sha256.txt"
+cp "$ROOT/manuscript/checksums_current_package_sha256.txt" "$STAGE_DIR/manuscript/checksums_current_package_sha256.txt"
 cp "$ROOT/manuscript/current/${MANUSCRIPT_BASENAME}.tex" "$STAGE_DIR/manuscript/current/${MANUSCRIPT_BASENAME}.tex"
 cp "$ROOT/manuscript/current/${MANUSCRIPT_BASENAME}.pdf" "$STAGE_DIR/manuscript/current/${MANUSCRIPT_BASENAME}.pdf"
 
@@ -61,8 +61,10 @@ cat > "$STAGE_DIR/PACKAGE_MANIFEST.md" <<EOF
 - Source repo: \`${ROOT}\`
 - Current manuscript line: \`manuscript/current/${MANUSCRIPT_BASENAME}.tex\`
 - Current PDF snapshot: \`manuscript/current/${MANUSCRIPT_BASENAME}.pdf\`
-- Scope: current-line TeX, current-line PDF, checksums, Energy scripts, Energy stats, active Energy analysis, repo entry docs, and shipped paper7 upstream reference snapshot
-- Exclusions: manuscript archive/history, non-current manuscript versions, review briefs, review pack notes, embedded historical review zip artifacts, non-current draft markdown, any \`*guarantee*\` artifacts, and archive analysis notes other than the narrow shipped provenance subset under \`results/analysis/archive/${ARCHIVE_SUBDIR}/\`
+- Active review checksum manifest: \`manuscript/checksums_active_review_surface_sha256.txt\`
+- Current package checksum manifest: \`manuscript/checksums_current_package_sha256.txt\`
+- Scope: current-line TeX, current-line PDF, current checksum manifests, Energy scripts, Energy stats, active Energy analysis, repo entry docs, and shipped paper7 upstream reference snapshot
+- Exclusions: manuscript archive/history, non-current manuscript versions, review briefs, review pack notes, embedded historical review zip artifacts, any \`*guarantee*\` artifacts, and archive analysis notes other than the narrow shipped provenance subset under \`results/analysis/archive/${ARCHIVE_SUBDIR}/\`
 - Coupled citation contract: context-only fixed-tree series-path reference
 - paper7 authority contract: fixed upstream manuscript snapshot \`paper7_integrated_manuscript_v0_29_2026-04-01.tex\` is shipped under \`upstream_reference/paper7_v0_29/\`
 - paper7 checksum contract: the shipped \`paper7_integrated_checksums_sha256.txt\` is package-verifiable because its referenced PNG support files are included under \`upstream_reference/paper7_v0_29/\`

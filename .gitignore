@@ -9,13 +9,12 @@
 
 !manuscript/
 manuscript/*
+!manuscript/checksums_active_review_surface_sha256.txt
+!manuscript/checksums_current_package_sha256.txt
 !manuscript/current/
 manuscript/current/*
-!manuscript/current/README.md
-!manuscript/current/checksums_sha256.txt
-!manuscript/current/nrr-energy_manuscript_draft_v0_5_2026-03-19.md
-!manuscript/current/nrr-energy_manuscript_v9.tex
-!manuscript/current/nrr-energy_manuscript_v9.pdf
+!manuscript/current/*.tex
+!manuscript/current/*.pdf
 
 !results/
 results/*
@@ -78,6 +77,7 @@ scripts/*
 !scripts/README.md
 !scripts/build_current_manuscript.sh
 !scripts/build_current_review_package.sh
+!scripts/verify_active_review_surface.sh
 !scripts/verify_current_package.sh
 !scripts/verify_step3_closure_contract.sh
 !scripts/recompute_evidence.sh
