@@ -1,0 +1,20 @@
+{
+  "run_label": "energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z",
+  "decision_context_glob": "decision_context_v2_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z.jsonl",
+  "source_dir": "/Users/saitokei/Documents/New project/_old_workspace/2026-03-04_legacy_workspaces/nrr-mst/results/energy_route_probe_live_impltrial_stable_20260312T071752Z/decision_context_v2/anthropic",
+  "dest_dir": "/Users/saitokei/Documents/New project/nrr-energy/stats/decision_context_v2_impltrial_stable_anthropic_20260312T071752Z",
+  "metadata_out": "/Users/saitokei/Documents/New project/nrr-energy/stats/decision_context_v2_impltrial_stable_anthropic_20260312T071752Z/condition_metadata_stagea_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_subset_v1.csv",
+  "audit_csv_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_bundle_input_audit_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1.csv",
+  "audit_md_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_bundle_input_audit_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1.md",
+  "bundle_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/calibration_bundle_stagea_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1.json",
+  "status_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_freeze_gate_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1.json",
+  "manifest_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_freeze_manifest_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1.json",
+  "status_index_csv_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_freeze_gate_status_index_v1.csv",
+  "status_index_md_out": "/Users/saitokei/Documents/New project/nrr-energy/results/analysis/energy_stagea_freeze_gate_status_index_v1.md",
+  "extractor_id": "observable_extractor_v2_compact_grounding_2026-03-12",
+  "extractor_checksum": "a58601aca37ba54e553575ea11cd20c02d7152c59e6ab602818c67780de881eb:40626f34b8ead02d831fb43c4e8195211c76471337d3e8a3942e1092b2996c8f:fbaddb7cc6f6aeaa33603c28e7f370401dbcd1eb9043abe9ba306a1fbd078384",
+  "profile": "q50_c50",
+  "cost_variant": "c_net_output",
+  "bundle_id": "calibration_bundle_stagea_energy_route_probe_live_impltrial_stable_anthropic_20260312T071752Z_v1",
+  "status": "frozen"
+}

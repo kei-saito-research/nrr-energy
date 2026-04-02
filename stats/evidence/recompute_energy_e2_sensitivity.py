@@ -10,6 +10,29 @@ from typing import Dict, Iterable, List, Tuple
 
 PROFILES = ["q80_c20", "q50_c50", "q20_c80"]
 COST_MODES = ["gross", "net"]
+FIELDNAMES = [
+    "dataset",
+    "profile",
+    "cost_mode",
+    "segment_type",
+    "segment_value",
+    "row_semantics",
+    "n_test",
+    "tie_count",
+    "tie_rate",
+    "coverage_count",
+    "coverage_rate",
+    "disagree_count",
+    "disagree_rate_all",
+    "disagree_rate_covered",
+    "tie_delta",
+    "tie_rate_delta",
+    "coverage_delta",
+    "coverage_rate_delta",
+    "disagree_delta",
+    "disagree_rate_all_delta",
+    "disagree_rate_covered_delta",
+]
 
 
 def read_rows(path: Path) -> List[dict]:
@@ -51,6 +74,74 @@ def summarize(rows: List[dict], mode: str, profile: str) -> Dict[str, float]:
         "disagree_count": disagree,
         "disagree_rate_all": disagree / n,
         "disagree_rate_covered": (disagree / coverage) if coverage else 0.0,
+    }
+
+
+def build_value_row(
+    dataset: str,
+    profile: str,
+    mode: str,
+    segment_type: str,
+    segment_value: str,
+    stats: Dict[str, float],
+) -> dict:
+    return {
+        "dataset": dataset,
+        "profile": profile,
+        "cost_mode": mode,
+        "segment_type": segment_type,
+        "segment_value": segment_value,
+        "row_semantics": "count_or_rate",
+        "n_test": stats["n_test"],
+        "tie_count": stats["tie_count"],
+        "tie_rate": stats["tie_rate"],
+        "coverage_count": stats["coverage_count"],
+        "coverage_rate": stats["coverage_rate"],
+        "disagree_count": stats["disagree_count"],
+        "disagree_rate_all": stats["disagree_rate_all"],
+        "disagree_rate_covered": stats["disagree_rate_covered"],
+        "tie_delta": "",
+        "tie_rate_delta": "",
+        "coverage_delta": "",
+        "coverage_rate_delta": "",
+        "disagree_delta": "",
+        "disagree_rate_all_delta": "",
+        "disagree_rate_covered_delta": "",
+    }
+
+
+def build_delta_row(
+    dataset: str,
+    profile: str,
+    segment_type: str,
+    segment_value: str,
+    gross: Dict[str, float],
+    net: Dict[str, float],
+) -> dict:
+    return {
+        "dataset": dataset,
+        "profile": profile,
+        "cost_mode": "delta_net_minus_gross",
+        "segment_type": segment_type,
+        "segment_value": segment_value,
+        "row_semantics": "delta",
+        "n_test": gross["n_test"],
+        "tie_count": "",
+        "tie_rate": "",
+        "coverage_count": "",
+        "coverage_rate": "",
+        "disagree_count": "",
+        "disagree_rate_all": "",
+        "disagree_rate_covered": "",
+        "tie_delta": net["tie_count"] - gross["tie_count"],
+        "tie_rate_delta": net["tie_rate"] - gross["tie_rate"],
+        "coverage_delta": net["coverage_count"] - gross["coverage_count"],
+        "coverage_rate_delta": net["coverage_rate"] - gross["coverage_rate"],
+        "disagree_delta": net["disagree_count"] - gross["disagree_count"],
+        "disagree_rate_all_delta": net["disagree_rate_all"] - gross["disagree_rate_all"],
+        "disagree_rate_covered_delta": (
+            net["disagree_rate_covered"] - gross["disagree_rate_covered"]
+        ),
     }
 
 
@@ -105,34 +196,11 @@ def build_summary(rows: List[dict]) -> List[dict]:
                 net = summarize(sub, "net", profile)
                 for mode, stats in [("gross", gross), ("net", net)]:
                     out.append(
-                        {
-                            "dataset": dataset,
-                            "profile": profile,
-                            "cost_mode": mode,
-                            "segment_type": segment_type,
-                            "segment_value": segment_value,
-                            **stats,
-                        }
+                        build_value_row(
+                            dataset, profile, mode, segment_type, segment_value, stats
+                        )
                     )
-                out.append(
-                    {
-                        "dataset": dataset,
-                        "profile": profile,
-                        "cost_mode": "delta_net_minus_gross",
-                        "segment_type": segment_type,
-                        "segment_value": segment_value,
-                        "n_test": gross["n_test"],
-                        "tie_count": net["tie_count"] - gross["tie_count"],
-                        "tie_rate": net["tie_rate"] - gross["tie_rate"],
-                        "coverage_count": net["coverage_count"] - gross["coverage_count"],
-                        "coverage_rate": net["coverage_rate"] - gross["coverage_rate"],
-                        "disagree_count": net["disagree_count"] - gross["disagree_count"],
-                        "disagree_rate_all": net["disagree_rate_all"] - gross["disagree_rate_all"],
-                        "disagree_rate_covered": (
-                            net["disagree_rate_covered"] - gross["disagree_rate_covered"]
-                        ),
-                    }
-                )
+                out.append(build_delta_row(dataset, profile, segment_type, segment_value, gross, net))
     return out
 
 
@@ -140,9 +208,8 @@ def write_csv(path: Path, rows: Iterable[dict]) -> None:
     rows = list(rows)
     if not rows:
         raise ValueError("no rows")
-    fieldnames = list(rows[0].keys())
     with path.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w = csv.DictWriter(f, fieldnames=FIELDNAMES)
         w.writeheader()
         w.writerows(rows)
 

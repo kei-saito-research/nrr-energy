@@ -1,0 +1,28 @@
+{
+  "bundle_id": "calibration_bundle_stagea_energy_route_probe_live_impltrial_stable_gemini_20260312T074421Z_v1",
+  "bundle_checksum": "95b1c22177a434ae87796e14debf1d006289a3b47769984c1037a74b35c30872",
+  "generated_at_utc": "2026-03-12T07:47:22Z",
+  "extractor_id": "observable_extractor_v2_compact_grounding_2026-03-12",
+  "extractor_checksum": "a58601aca37ba54e553575ea11cd20c02d7152c59e6ab602818c67780de881eb:40626f34b8ead02d831fb43c4e8195211c76471337d3e8a3942e1092b2996c8f:fbaddb7cc6f6aeaa33603c28e7f370401dbcd1eb9043abe9ba306a1fbd078384",
+  "profile": "q50_c50",
+  "cost_variant": "c_net_output",
+  "rows": [
+    {
+      "condition_key": "S_STABLE_01|gemini|gemini-2.0-flash|0.3|S_STABLE_ROUTE_PROBE_MAIN_01|branch",
+      "dataset_family": "stageb",
+      "provider": "gemini",
+      "pattern_or_combo_direction": "branch",
+      "temperature": 0.3,
+      "profile": "q50_c50",
+      "cost_variant": "c_net_output",
+      "wq": 0.5,
+      "wc": 0.5,
+      "q_mu_cal": 0.9589688552188552,
+      "q_sd_cal": 0.011620381040875967,
+      "c_mu_cal": -915.375,
+      "c_sd_cal": 8.290619699395215,
+      "tau_group_key": "stageb|q50_c50|c_net_output",
+      "tau_group_value": 0.013774560731055808
+    }
+  ]
+}

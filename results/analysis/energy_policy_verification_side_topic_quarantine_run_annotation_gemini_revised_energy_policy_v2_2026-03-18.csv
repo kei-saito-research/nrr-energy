@@ -1,0 +1,13 @@
+run_item_id,template_id,acceptance_variant_id,rep_id,chosen_side_direction_workstart_present,suspended_main_reference_absent,main_direction_intrusion_absent,appropriate,notes_optional
+PSA_A_side_r01,A_trip_planning,accept_side_first,1,1,1,1,1,Gemini revised arm begins restaurant work with one focused side-topic question and keeps budget-and-schedule suspended.
+PSA_A_side_r02,A_trip_planning,accept_side_first,2,1,1,1,1,Gemini revised arm begins restaurant work with one focused side-topic question and keeps budget-and-schedule suspended.
+PSA_A_side_r03,A_trip_planning,accept_side_first,3,1,1,1,1,Gemini revised arm begins restaurant work with one focused side-topic question and keeps budget-and-schedule suspended.
+PSA_A_side_r04,A_trip_planning,accept_side_first,4,1,1,1,1,Gemini revised arm begins restaurant work with one focused side-topic question and keeps budget-and-schedule suspended.
+PSA_B_side_r01,B_hiring_packet,accept_side_first,1,1,1,1,1,Gemini revised arm begins onboarding-training work with one focused side-topic question and does not mention the hiring packet.
+PSA_B_side_r02,B_hiring_packet,accept_side_first,2,1,1,1,1,Gemini revised arm begins onboarding-training work with one focused side-topic question and does not mention the hiring packet.
+PSA_B_side_r03,B_hiring_packet,accept_side_first,3,1,1,1,1,Gemini revised arm begins onboarding-training work with one focused side-topic question and does not mention the hiring packet.
+PSA_B_side_r04,B_hiring_packet,accept_side_first,4,1,1,1,1,Gemini revised arm begins onboarding-training work with one focused side-topic question and does not mention the hiring packet.
+PSA_C_side_r01,C_incident_response,accept_side_first,1,1,1,1,1,Gemini revised arm begins postmortem-format work with one focused side-topic question and keeps the incident-response plan suspended.
+PSA_C_side_r02,C_incident_response,accept_side_first,2,1,1,1,1,Gemini revised arm begins postmortem-format work with one focused side-topic question and keeps the incident-response plan suspended.
+PSA_C_side_r03,C_incident_response,accept_side_first,3,1,1,1,1,Gemini revised arm begins postmortem-format work with one focused side-topic question and keeps the incident-response plan suspended.
+PSA_C_side_r04,C_incident_response,accept_side_first,4,1,1,1,1,Gemini revised arm begins postmortem-format work with one focused side-topic question and keeps the incident-response plan suspended.

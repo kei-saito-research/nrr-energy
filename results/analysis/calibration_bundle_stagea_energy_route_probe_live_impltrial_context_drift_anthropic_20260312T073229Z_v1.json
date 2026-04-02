@@ -1,0 +1,28 @@
+{
+  "bundle_id": "calibration_bundle_stagea_energy_route_probe_live_impltrial_context_drift_anthropic_20260312T073229Z_v1",
+  "bundle_checksum": "374bb2cb086a0914e230514a70c7b99f117ef08fcece51f6660aa62b931e79d3",
+  "generated_at_utc": "2026-03-12T07:39:00Z",
+  "extractor_id": "observable_extractor_v2_compact_grounding_2026-03-12",
+  "extractor_checksum": "a58601aca37ba54e553575ea11cd20c02d7152c59e6ab602818c67780de881eb:40626f34b8ead02d831fb43c4e8195211c76471337d3e8a3942e1092b2996c8f:fbaddb7cc6f6aeaa33603c28e7f370401dbcd1eb9043abe9ba306a1fbd078384",
+  "profile": "q50_c50",
+  "cost_variant": "c_net_output",
+  "rows": [
+    {
+      "condition_key": "S_CONTEXT_DRIFT_01|anthropic|claude-sonnet-4-20250514|0.3|S_CONTEXT_DRIFT_ROUTE_PROBE_MAIN_01|branch",
+      "dataset_family": "stageb",
+      "provider": "anthropic",
+      "pattern_or_combo_direction": "branch",
+      "temperature": 0.3,
+      "profile": "q50_c50",
+      "cost_variant": "c_net_output",
+      "wq": 0.5,
+      "wc": 0.5,
+      "q_mu_cal": 0.9732878427747564,
+      "q_sd_cal": 0.006914053534111399,
+      "c_mu_cal": -853.375,
+      "c_sd_cal": 4.794202227691277,
+      "tau_group_key": "stageb|q50_c50|c_net_output",
+      "tau_group_value": 0.013774560731055808
+    }
+  ]
+}

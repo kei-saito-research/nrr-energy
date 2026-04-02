@@ -1,0 +1,2 @@
+condition_key,valid_rows,dataset_family,pattern_or_combo_direction,provider,temperature,q_mu_cal,q_sd_cal,c_mu_cal,c_sd_cal,tau_present,bundle_usable,failure_code
+S_CONTEXT_DRIFT_01|gemini|gemini-2.0-flash|0.3|S_CONTEXT_DRIFT_ROUTE_PROBE_MAIN_01|branch,2,stageb,branch,gemini,0.3,0.97701048951,0.00352564102564,-869.5,4.5,1,1,

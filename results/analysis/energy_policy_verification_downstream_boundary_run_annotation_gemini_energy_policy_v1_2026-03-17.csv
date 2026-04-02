@@ -1,0 +1,25 @@
+run_item_id,template_id,acceptance_variant_id,rep_id,accepted_direction_followthrough_present,rejected_direction_intrusion_absent,preacceptance_rework_burden_absent,appropriate,notes_optional
+PRA_A_main_r01,A_trip_planning,accept_main_first,1,0,1,1,0,"Turn 3 cleanly leaves the choice open, but turn 5 only acknowledges the accepted budget-schedule direction without beginning work."
+PRA_A_main_r02,A_trip_planning,accept_main_first,2,0,1,1,0,"Turn 3 cleanly leaves the choice open, but turn 5 only acknowledges the accepted budget-schedule direction without beginning work."
+PRA_A_main_r03,A_trip_planning,accept_main_first,3,0,1,1,0,"Turn 3 cleanly leaves the choice open, but turn 5 only acknowledges the accepted budget-schedule direction without beginning work."
+PRA_A_main_r04,A_trip_planning,accept_main_first,4,0,1,1,0,"Turn 3 cleanly leaves the choice open, but turn 5 only acknowledges the accepted budget-schedule direction without beginning work."
+PRA_A_side_r01,A_trip_planning,accept_side_first,1,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted restaurant direction.
+PRA_A_side_r02,A_trip_planning,accept_side_first,2,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted restaurant direction.
+PRA_A_side_r03,A_trip_planning,accept_side_first,3,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted restaurant direction.
+PRA_A_side_r04,A_trip_planning,accept_side_first,4,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted restaurant direction.
+PRA_B_main_r01,B_hiring_packet,accept_main_first,1,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted hiring-packet direction.
+PRA_B_main_r02,B_hiring_packet,accept_main_first,2,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted hiring-packet direction without beginning work."
+PRA_B_main_r03,B_hiring_packet,accept_main_first,3,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted hiring-packet direction.
+PRA_B_main_r04,B_hiring_packet,accept_main_first,4,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted hiring-packet direction without beginning work."
+PRA_B_side_r01,B_hiring_packet,accept_side_first,1,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted onboarding direction.
+PRA_B_side_r02,B_hiring_packet,accept_side_first,2,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted onboarding direction.
+PRA_B_side_r03,B_hiring_packet,accept_side_first,3,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted onboarding direction.
+PRA_B_side_r04,B_hiring_packet,accept_side_first,4,1,1,1,1,Turn 3 leaves the choice open and turn 5 begins only the accepted onboarding direction.
+PRA_C_main_r01,C_incident_response,accept_main_first,1,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted incident-response direction without beginning work."
+PRA_C_main_r02,C_incident_response,accept_main_first,2,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted incident-response direction without beginning work."
+PRA_C_main_r03,C_incident_response,accept_main_first,3,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted incident-response direction without beginning work."
+PRA_C_main_r04,C_incident_response,accept_main_first,4,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted incident-response direction without beginning work."
+PRA_C_side_r01,C_incident_response,accept_side_first,1,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted postmortem direction without beginning work."
+PRA_C_side_r02,C_incident_response,accept_side_first,2,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted postmortem direction without beginning work."
+PRA_C_side_r03,C_incident_response,accept_side_first,3,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted postmortem direction without beginning work."
+PRA_C_side_r04,C_incident_response,accept_side_first,4,0,1,1,0,"Turn 3 leaves the choice open, but turn 5 only acknowledges the accepted postmortem direction without beginning work."

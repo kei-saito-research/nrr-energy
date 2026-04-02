@@ -4,11 +4,18 @@
 - Date: 2026-03-17
 - Type: annotation minispec
 - Scope: freeze the exact first-step annotation contract for the mainline side-topic / quarantine verification pilot
-- Active row set:
+- Current repaired execution row set:
+  - [energy_policy_verification_side_topic_quarantine_run_input_v2_2026-03-18.csv](energy_policy_verification_side_topic_quarantine_run_input_v2_2026-03-18.csv)
+  - [energy_policy_verification_side_topic_quarantine_run_input_gemini_v2_2026-03-18.csv](energy_policy_verification_side_topic_quarantine_run_input_gemini_v2_2026-03-18.csv)
+- Superseded malformed provenance row set:
   - [energy_policy_verification_side_topic_quarantine_run_input_v1_2026-03-17.csv](energy_policy_verification_side_topic_quarantine_run_input_v1_2026-03-17.csv)
   - [energy_policy_verification_side_topic_quarantine_run_input_gemini_v1_2026-03-17.csv](energy_policy_verification_side_topic_quarantine_run_input_gemini_v1_2026-03-17.csv)
 - Not a run authorization memo
 - Not a manuscript claim memo
+
+Package note:
+- this minispec freezes the scoring contract, not the malformed serialization
+- the current bounded repaired read uses the `v2` row set above
 
 ## 1. Episode Unit
 Score one response only:

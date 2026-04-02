@@ -1,0 +1,2 @@
+condition_key,valid_rows,dataset_family,pattern_or_combo_direction,provider,temperature,q_mu_cal,q_sd_cal,c_mu_cal,c_sd_cal,tau_present,bundle_usable,failure_code
+S_CONTEXT_DRIFT_01|anthropic|claude-sonnet-4-20250514|0.3|S_CONTEXT_DRIFT_ROUTE_PROBE_MAIN_01|branch,8,stageb,branch,anthropic,0.3,0.973287842775,0.00691405353411,-853.375,4.79420222769,1,1,

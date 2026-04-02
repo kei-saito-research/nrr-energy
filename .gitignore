@@ -23,6 +23,11 @@ results/*
 !results/analysis/
 results/analysis/*
 !results/analysis/energy_to_policy_handoff_memo_v1_2026-03-18.md
+!results/analysis/energy_stagea_v2_impltrial_anthropic_gemini_summary_v1_2026-03-12.md
+!results/analysis/energy_forward_main_batch_results_v1_2026-03-12.md
+!results/analysis/energy_forward_main_batch_gemini_results_v1_2026-03-12.md
+!results/analysis/energy_forward_combo_two_direction_anthropic_results_v1_2026-03-13.md
+!results/analysis/energy_forward_combo_two_direction_gemini_results_v1_2026-03-13.md
 !results/analysis/energy_priority_resolution_package_map_v1_2026-03-18.md
 !results/analysis/energy_priority_resolution_branch_handoff_v3_2026-03-18.md
 !results/analysis/energy_priority_resolution_branch_synthesis_memo_v3_2026-03-18.md
@@ -72,7 +77,9 @@ results/analysis/*
 scripts/*
 !scripts/README.md
 !scripts/build_current_manuscript.sh
+!scripts/build_current_review_package.sh
 !scripts/verify_current_package.sh
+!scripts/verify_step3_closure_contract.sh
 !scripts/recompute_evidence.sh
 !scripts/rebuild_all.sh
 

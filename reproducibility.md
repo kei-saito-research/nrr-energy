@@ -4,61 +4,80 @@
 
 This repository surface bundles the current Energy manuscript package together with
 the calibration evidence tables, vendored paired inputs, and bounded downstream
-analysis artifacts needed to reproduce the current handoff-ready Energy line.
+handoff artifacts needed to reproduce the current handoff-ready Energy line.
 
 ## Stable review-package commands
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v9.pdf`
+  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v26.pdf`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
+- Verify the Step 3 closure contract on the repo surface:
+  - `bash scripts/verify_step3_closure_contract.sh`
+- Verify the Step 3 closure contract on an unpacked review package:
+  - `bash scripts/verify_step3_closure_contract.sh /path/to/unpacked_review_root`
+- Build the current review package with explicit allowlisted contents:
+  - `bash scripts/build_current_review_package.sh`
 - Recompute the bundled Energy evidence tables:
   - `bash scripts/recompute_evidence.sh`
 
 ## Current review package
 
-- Main TeX: `manuscript/current/nrr-energy_manuscript_v9.tex`
-- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v9.pdf`
-- Current working markdown draft: `manuscript/current/nrr-energy_manuscript_draft_v0_5_2026-03-19.md`
+- Main TeX: `manuscript/current/nrr-energy_manuscript_v26.tex`
+- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v26.pdf`
 - Checksum manifest: `manuscript/current/checksums_sha256.txt`
+- Repo-local working markdown draft retained outside the current review surface:
+  - `manuscript/current/nrr-energy_manuscript_draft_v0_5_2026-03-19.md`
 
 ## Checksum policy
 
 - `manuscript/current/checksums_sha256.txt` covers the tracked files that define the
   current review package for the latest manuscript line in `manuscript/current/`.
 - Coverage includes the current main `.tex` file and the committed current `.pdf`.
-- Coverage excludes `checksums_sha256.txt` itself, the working markdown draft,
+- Coverage excludes `checksums_sha256.txt` itself, the repo-local working markdown draft,
   older manuscript versions that may remain for local continuity, and repo-specific
   artifacts outside `manuscript/current/` unless a separate manifest is provided.
 
 ## Bundled evidence surface
 
 - Calibration tables and rebuild scripts:
-  - `stats/evidence/energy_e1_delta_u_table_v1.csv`
   - `stats/evidence/energy_e1_delta_u_table_v1_1.csv`
   - `stats/evidence/energy_e1_cost_variant_audit_v1.csv`
-  - `stats/evidence/energy_e1_tau_summary_v1.csv`
   - `stats/evidence/energy_e1_tau_summary_v1_1.csv`
   - `stats/evidence/energy_e2_sensitivity_summary_v1.csv`
   - `stats/evidence/recompute_energy_e1_tables.py`
   - `stats/evidence/recompute_energy_e2_sensitivity.py`
-- Vendored upstream paired inputs:
+- Frozen Boundary-derived physical paired inputs:
   - `stats/stageb_all/`
   - `stats/combo_rep3_all/`
   - `stats/raw_stageb_all/`
   - `stats/raw_combo_rep3_all/`
-- Current manuscript-facing downstream analysis anchors:
-  - `results/analysis/energy_priority_resolution_branch_handoff_v3_2026-03-18.md`
-  - `results/analysis/energy_priority_resolution_branch_synthesis_memo_v3_2026-03-18.md`
-  - `results/analysis/energy_priority_resolution_package_map_v1_2026-03-18.md`
-  - `results/analysis/energy_priority_resolution_manuscript_boundary_text_v2_2026-03-18.md`
-  - `results/analysis/energy_priority_resolution_package_boundary_external_review_decision_memo_v1_2026-03-18.md`
-  - `results/analysis/energy_to_policy_handoff_memo_v1_2026-03-18.md`
+- Current manuscript-facing calibration and transfer anchors:
+  - `results/analysis/energy_stagea_v2_impltrial_anthropic_gemini_summary_v1_2026-03-12.md`
+  - `results/analysis/energy_forward_main_batch_results_v1_2026-03-12.md`
+  - `results/analysis/energy_forward_main_batch_gemini_results_v1_2026-03-12.md`
+  - `results/analysis/energy_forward_combo_two_direction_anthropic_results_v1_2026-03-13.md`
+  - `results/analysis/energy_forward_combo_two_direction_gemini_results_v1_2026-03-13.md`
+  - `results/analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md`
+  - plus the directly linked Stage A audit, package-local condition-metadata CSVs, freeze-gate, freeze-manifest, and calibration-bundle artifacts for the four routed implementation-trial runs
+- Bundled downstream handoff references for later `Policy-Verification` work:
+  - `results/analysis/energy_policy_verification_priority_resolution_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md`
+  - `results/analysis/energy_policy_verification_pilot_readout_external_review_decision_memo_v1_2026-03-17.md`
+  - `results/analysis/energy_policy_verification_downstream_boundary_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md`
+  - `results/analysis/energy_policy_verification_downstream_boundary_readout_external_review_decision_memo_v1_2026-03-17.md`
+  - `results/analysis/energy_policy_verification_side_topic_quarantine_readout_external_review_decision_memo_v1_2026-03-18.md`
+  - `results/analysis/energy_policy_verification_side_topic_quarantine_baseline_vs_revised_energy_policy_comparison_memo_v2_2026-03-18.md`
+  - plus the downstream support layer:
+    - side-topic/quarantine minispec and repair memos
+    - repaired and superseded side-topic/quarantine run-input CSVs
+    - linked run-annotation CSVs
+    - authorized run-output directories for the frozen 2026-03-17 priority-resolution, downstream-boundary, and repaired side-topic/quarantine provider slices
 
 ## Vendored upstream note
 
-Boundary-derived calibration inputs were copied into this workspace on 2026-03-07 JST.
+The vendored paired inputs in this workspace were copied from the historical
+`Boundary` workspace on 2026-03-07 JST.
 
 Source snapshot at copy time:
 - workspace: `nrr-boundary`
@@ -66,8 +85,50 @@ Source snapshot at copy time:
 - HEAD: `4cbb80c`
 - copied stats paths had no local diffs at copy time
 
+Physical origin:
+- the files under `stats/stageb_all/`, `stats/combo_rep3_all/`, `stats/raw_stageb_all/`,
+  and `stats/raw_combo_rep3_all/` are the fixed vendored 2026-03-07 copy of the
+  historical `Boundary` snapshot listed above
+
+Current series-role split:
+- the fixed integrated `paper7` authority surface anchors the upstream
+  family-benchmark plus selected Stage B boundary-honesty role for the current
+  `paper7 -> Energy` handoff
+- the carried-forward Stage B slice is the overlap between that fixed paper7
+  authority surface and the frozen Boundary-derived physical input snapshot
+- the ordered-combo slice is reused from the same frozen Boundary-derived input
+  snapshot as an Energy-side calibration extension and is not part of the fixed
+  paper7 authority contract
+
+Series-path context note:
+- `Coupled` is cited in the current Energy manuscript as a fixed-tree context reference
+  for the dependency-propagation layer
+- `Coupled` is not a direct evidentiary input to the current Energy package
+
+Fixed upstream authority note:
+- the current upstream authority surface for the integrated `paper7 -> Energy`
+  handoff is fixed to `paper7_integrated_manuscript_v0_29_2026-04-01.tex`
+- exact upstream artifact names and checksums are recorded in
+  `results/analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md`
+- the shipped `upstream_reference/paper7_v0_29/` snapshot includes the PNG support
+  files referenced by `paper7_integrated_checksums_sha256.txt`, so the paper7
+  checksum manifest is package-verifiable inside the review drop
+
 These vendored inputs are the frozen upstream snapshot for the current Energy rebuild surface.
 If they are intentionally revised later, record a new source note rather than silently replacing them.
+
+## Forward Summary Surface Note
+
+- The current review surface ships the Stage A implementation-trial summary together
+  with its directly linked audit, freeze-gate, freeze-manifest, and calibration-bundle
+  artifacts for the four routed runs.
+- The shipped Stage A audit memos reference package-local condition-metadata CSVs and
+  the shipped `energy_e1_tau_summary_v1_1.csv` via relative paths only.
+- Later forward evidence is shipped at the summary-memo level.
+- Some historical forward raw payload, audit, bundle, and decision-context files referenced during
+  the original execution are not retained in the current review surface.
+- In the shipped surface, later forward-package closure is therefore defined at the
+  summary-memo layer rather than as a complete raw rerun or audit export.
 
 ## Fixed rebuild surface
 
@@ -76,24 +137,31 @@ The current reproducible Energy rebuild surface is limited to:
 - E-2 sensitivity table recomputation
 
 Current stable outputs:
-- `stats/evidence/energy_e1_delta_u_table_v1.csv`
 - `stats/evidence/energy_e1_delta_u_table_v1_1.csv`
 - `stats/evidence/energy_e1_cost_variant_audit_v1.csv`
-- `stats/evidence/energy_e1_tau_summary_v1.csv`
 - `stats/evidence/energy_e1_tau_summary_v1_1.csv`
 - `stats/evidence/energy_e2_sensitivity_summary_v1.csv`
+
+Legacy `energy_e1_*_v1.csv` files may remain on the repo surface for local history,
+but they are not part of the current review-package authority surface.
 
 ## Artifact map
 
 | Artifact | Command | Output |
 |---|---|---|
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v9.pdf` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v26.pdf` |
 | Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
+| Step 3 closure contract verification | `bash scripts/verify_step3_closure_contract.sh` | stdout pass/fail for repo-side Step 3 closure preflight |
+| Current review package build | `bash scripts/build_current_review_package.sh` | zip path for the current allowlisted review package |
 | Energy evidence recomputation | `bash scripts/recompute_evidence.sh` | refreshed `stats/evidence/energy_e1_*` and `stats/evidence/energy_e2_sensitivity_summary_v1.csv` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v9.tex` |
+| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v26.tex` |
 
 ## Scope caveat
 
-- The current Energy package is closed as a handoff-ready calibration and boundary package.
+- The current Energy package is closed as a handoff-ready calibration and boundary package at the shipped manuscript-plus-summary-memo level.
 - Broader prospective `baseline vs Energy policy` validation is downstream-owned by `Policy-Verification`.
-- Dialogue-side carryforward remains bounded to the tested provider pair and does not by itself authorize provider-universal or long-horizon claims.
+- Shipped downstream `Policy-Verification` materials are bounded handoff references for later validation work; they are not core manuscript evidence claims of the Energy paper.
+- The linked run-annotation CSVs and authorized 2026-03-17 run-output directories for the shipped downstream comparison memos, including the repaired side-topic/quarantine reruns, are included in the review package.
+- The current review surface is not a full rerun export for every historical forward execution file.
+- Superseded malformed-input side-topic/quarantine `v1` readouts are archived out of
+  the current manuscript-facing surface and should not be used as current evidence.

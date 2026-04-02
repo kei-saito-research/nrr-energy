@@ -1,0 +1,440 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+}
+
+\title{\textbf{NRR-Energy: Calibration of Commit/Defer Utility\\Under Existing Paired Inputs}}
+
+\author{
+  Kei Saito\thanks{ORCID: 0009-0006-4715-9176} \\
+  Independent Researcher, Japan \\
+  \texttt{kei.saito.research@gmail.com}
+}
+
+\date{April 2026 \\[0.5em]
+\textit{Part of the Non-Resolution Reasoning (NRR) research program.}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\textcopyright\ 2026 Kei Saito.
+Licensed under CC BY 4.0.\\
+\url{https://creativecommons.org/licenses/by/4.0/}
+\end{center}
+
+\begin{abstract}
+This paper introduces an Energy-layer calibration procedure for commit/defer decision support using existing paired datasets anchored by two frozen upstream surfaces with different roles: a fixed integrated paper7 authority surface that defines the family-benchmark plus selected Stage B boundary-honesty read reused here, and a separate fixed 2026-03-07 Boundary-derived vendored input snapshot that physically contains the Stage B and ordered-combo paired files used for the current Energy rebuild. The method fixes utility construction and calibration-only thresholding before test-side evaluation. We define utility from quality-improvement and rework-cost terms and evaluate two cost formulations: gross rework improvement and output-overhead-adjusted net cost. Under tested conditions, net-cost calibration expands decision coverage relative to gross-cost calibration, but this expansion is condition-sensitive. In Stage B, net-cost calibration increases coverage while also increasing disagreement against calibration-derived oracle labels; in ordered-combo data, net-cost calibration increases coverage without increasing overall disagreement. Sensitivity analyses identify disagreement-prone regions concentrated in Gemini and in Stage B at higher temperature, while complementary sign-flip boundary summaries remain package-disclosed paired-input heterogeneity warnings rather than a fully tabulated manuscript result. Narrow implementation-gated forward checks also replay exactly on the tested covered slices while exposing a provider-specific transfer boundary. Anthropic remains route-stable on the tested branch and branch-adjacent combo stable slices, whereas Gemini already shows stable-slice route instability on the tested branch covered slice and that instability sharpens on the tested combo opening. Because realized forward outcomes remain matched between baseline and Energy arms in these batches, these forward checks support boundary mapping rather than gain claims. Taken together, the results define a reproducible calibration procedure together with a current split-bounded boundary read for Energy instrumentation, and they delimit where direct policy claims still require additional forward paired validation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Non-Resolution Reasoning, Energy calibration, commit/defer control, boundary conditions, disagreement analysis
+
+\section{Introduction}
+\label{sec:intro}
+
+NRR-Energy is one module in the ongoing NRR research program:
+Core $\rightarrow$ Phi $\rightarrow$ IME $\rightarrow$ Transfer $\rightarrow$ Coupled $\rightarrow$ integrated paper7 $\rightarrow$ Energy.
+Core and Phi established state- and entropy-side operator behavior~\cite{saito2025nrr,saito2026phi}. IME and Transfer established extraction reliability and transfer behavior~\cite{saito2026ime,saito2026transfer}. Coupled provides a series-path dependency-propagation check surface cited here for context rather than as a direct evidentiary input to the present Energy calibration claims~\cite{saito2026coupled}. Integrated paper7 then fixed the upstream delayed-commitment family benchmark together with the selected Stage B boundary-honesty layer that Energy reuses as its reviewer-facing authority surface~\cite{saito2026principles}. Separate from that authority surface, the physical paired-input files reused here are the fixed vendored 2026-03-07 Boundary-derived copy recorded in the reproducibility note. In the current Energy line, the carried-forward Stage B slice is the overlap between those two frozen surfaces, while the ordered-combo slice is reused from the same Boundary-derived vendored snapshot as an Energy-side calibration extension rather than attributed to the fixed paper7 authority contract. Energy uses these frozen inputs to calibrate a commit/defer utility instrument, to report manuscript-facing disagreement-prone regions, and to disclose complementary sign-flip/non-effective context on the shipped paired-input surfaces.
+
+This manuscript remains a calibration paper. It answers two main questions under fixed procedures: (i) can an Energy utility instrument be defined and reproduced, and (ii) under which conditions does that calibrated instrument produce stable versus unstable decision behavior. It also reports a narrow implementation-gated forward transfer boundary: whether a frozen routed Stage A path and first covered forward slices can execute and replay exactly without upgrading the evidence to a policy-improvement claim. It does not answer whether an online Energy policy improves outcomes prospectively versus baseline under new paired runs. Repository-shipped downstream `Policy-Verification` notes remain bounded handoff references for later work rather than core manuscript evidence claims of the present paper.
+
+In external-method terms, this is not probability calibration over a model's own
+class-confidence output~\cite{guo2017calibration}. The calibrated quantity here
+is a paired task-level utility signal built from baseline-versus-pattern quality
+and cost deltas. Operationally it is closer to selective-decision or
+risk-coverage thresholding~\cite{geifman2017selective}: a score is thresholded
+to decide whether a callable preference is emitted, but the score itself is a
+task-level utility construction rather than a direct classifier confidence.
+
+NRR is not an anti-LLM framework.
+NRR does not replace standard LLM use.
+NRR optimizes when to commit and when to defer, under explicit conditions.
+NRR is a derivation-and-evaluation framework, not a closed recipe; the current operator and condition set is an evaluated set under tested conditions, not an exhaustive set.
+
+\textbf{Series Consistency Statement:}
+At this evidence state, unsupported interpretations are not injected, hypothesis-set expansion is evidence-gated, and unobserved possibilities remain explicitly unresolved.
+
+\subsection{Contributions}
+
+\begin{enumerate}
+  \item A reproducible calibration procedure for an Energy-style commit/defer utility instrument under existing paired inputs anchored by a fixed integrated paper7 authority surface together with a separate Boundary-derived vendored input snapshot.
+  \item Multi-profile calibration reporting across quality- and cost-weighted utility settings.
+  \item Explicit manuscript-facing boundary reporting for calibration disagreement regions and implementation-gated forward transfer boundaries, together with package-level disclosure of complementary sign-flip/non-effective context, including provider, temperature, and ordered-combination effects.
+  \item A claim architecture that separates procedure-level calibration claims, current split findings, forward transfer boundaries, and downstream handoff references for later validation work.
+\end{enumerate}
+
+\section{Framework and Calibration Procedure}
+\label{sec:framework}
+
+\subsection{Inputs}
+\label{sec:inputs}
+
+The calibration uses three input classes:
+\begin{itemize}
+  \item Stage B paired metrics (\texttt{stats/stageb\_all/mst\_pair\_metrics.csv}); in the current series read, this slice overlaps the fixed paper7 authority surface and the frozen Boundary-derived vendored input snapshot
+  \item ordered-combo paired metrics (\texttt{stats/combo\_rep3\_all/mst\_pair\_metrics.csv}); in the current series read, this slice is reused from the same frozen Boundary-derived vendored input snapshot as an Energy-side calibration extension rather than as part of the fixed paper7 authority surface
+  \item raw run traces for output-token and total-overhead reconstruction used in the current cost audit
+\end{itemize}
+
+The current split instantiation uses calibration rows from reps 1 and 2 and test rows from rep 3. This split instance is provisional; the split procedure itself is the fixed part.
+
+\subsection{Utility Definition}
+\label{sec:utility}
+
+Each dataset row is keyed by
+\((\mathrm{dataset}, \mathrm{provider}, \mathrm{pattern}, \mathrm{scenario\_id}, \mathrm{rep}, \mathrm{temperature})\).
+For a keyed row to enter the Energy table, the pair-metrics CSV must contain both
+the \texttt{misinterpretation\_rate} and \texttt{rework\_cost\_tokens} entries and
+the row must satisfy \texttt{tau\_trace\_pass = True}.
+
+We then define a quality term and three cost terms directly from the shipped
+artifacts:
+\begin{itemize}
+  \item $Q =$ the \texttt{improvement} value from the
+  \texttt{misinterpretation\_rate} row in \texttt{mst\_pair\_metrics.csv}
+  \item $C_{\mathrm{gross}} =$ the \texttt{improvement} value from the
+  \texttt{rework\_cost\_tokens} row in \texttt{mst\_pair\_metrics.csv}
+  \item $\mathrm{overhead}_{\mathrm{output}} =$ total pattern-arm output tokens
+  minus total baseline-arm output tokens reconstructed from the matched raw JSON
+  pair under the same keyed row
+  \item $\mathrm{overhead}_{\mathrm{total}} =$ total pattern-arm tokens minus
+  total baseline-arm tokens reconstructed from the same matched raw JSON pair,
+  including both input-side and output-side token counts
+  \item $C_{\mathrm{net}}(\mathrm{output}) = C_{\mathrm{gross}} - \mathrm{overhead}_{\mathrm{output}}$
+  \item $C_{\mathrm{net}}(\mathrm{total}) = C_{\mathrm{gross}} - \mathrm{overhead}_{\mathrm{total}}$
+\end{itemize}
+
+Positive $Q$ means the pattern arm improves misinterpretation rate relative to
+baseline under the shipped pair-metric sign convention. Positive
+$C_{\mathrm{gross}}$ means the pattern arm improves rework-cost burden relative to
+baseline, and positive \(C_{\mathrm{net}}(\mathrm{output})\) means that gross
+rework gain remains after subtracting output-token overhead from the matched raw
+rerun.
+
+The main calibration utility is
+\[
+\Delta U = w_Q \cdot z(Q)_{\mathrm{cal}} + w_C \cdot z(C)_{\mathrm{cal}},
+\]
+where z-scoring is computed on calibration rows only.
+Here $C$ denotes either $C_{\mathrm{gross}}$ or $C_{\mathrm{net}}(\mathrm{output})$ depending on the calibration variant.
+The gross variant serves as a reference calibration and the output-net variant as
+the primary calibration reported in Sections~\ref{sec:results}
+and~\ref{sec:boundaries}. $C_{\mathrm{net}}(\mathrm{total})$ is retained only as
+an audited comparison cost definition for the cost-gate check in
+Section~\ref{sec:costgate}; it is not used as the primary calibration cost term.
+
+\subsection{Profiles, Threshold, and Oracle}
+\label{sec:profiles}
+
+Three weight profiles are reported:
+\begin{itemize}
+  \item \texttt{q80\_c20}
+  \item \texttt{q50\_c50}
+  \item \texttt{q20\_c80}
+\end{itemize}
+
+For each dataset and profile, the tie threshold is derived from the
+calibration rows as
+\[
+\tau = q_{0.2}\left(|\Delta U_{\mathrm{cal}}|\right).
+\]
+
+No separate noise-floor decision branch is carried in the current shipped
+authority surface. The current freeze retains only this quantile-threshold
+route.
+
+Within a given dataset-profile slice, this threshold is shared across the
+condition cells evaluated under that slice. The oracle sign remains
+condition-local and is defined by the calibration-side mean sign of $\Delta U$
+for each condition. Test rows then emit a decision
+(\texttt{prefer\_pattern}, \texttt{prefer\_baseline}, or \texttt{tie}), a
+coverage flag, and a disagreement flag. Reported disagreement rates use Wilson
+95\% confidence intervals~\cite{wilson1927} from
+$(\mathrm{disagree\_count}, n_{\mathrm{test}})$.
+
+\subsection{E-1 Freeze Map}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}lXl@{}}
+\toprule
+E-1 item & Freeze decision in this draft & Method anchor \\
+\midrule
+E1-01 & Adopted (utility frame). Semantic interpretation is finalized jointly with E1-08 cost definition. & Secs.~\ref{sec:utility}, \ref{sec:costgate} \\
+E1-02 & Adopted (calibration-only z-score normalization). & Sec.~\ref{sec:utility} \\
+E1-03 & Adopted (multi-profile sensitivity; three weight profiles). & Secs.~\ref{sec:profiles}, \ref{sec:e1summary} \\
+E1-04 & Adopted (quantile threshold derivation). & Sec.~\ref{sec:profiles} \\
+E1-05 & Adopted as procedure; current rep-based split instance is provisional. & Sec.~\ref{sec:inputs} \\
+E1-06 & Adopted (CSV-complete outputs for tie, coverage, disagreement, and CI-ready counts). & Sec.~\ref{sec:profiles} \\
+E1-07 & Not carried into the current shipped authority surface; historical worksheet diagnostic branch only. & Sec.~\ref{sec:profiles} \\
+E1-08 & Adopted (\texttt{C\_net(output)} primary, \texttt{C\_gross} reference, \texttt{C\_net(total)} rejected for primary use). & Sec.~\ref{sec:costgate} \\
+E1-09 & Adopted as procedure freeze (derive $\tau$ per dataset/profile while keeping oracle signs condition-local), not value freeze of a single global table. & Secs.~\ref{sec:profiles}, \ref{sec:e1summary} \\
+\bottomrule
+\end{tabularx}
+\caption{Mapping from the E-1 worksheet to the current calibration procedure.}
+\label{tab:e1_map}
+\end{table}
+
+\subsection{Claim Levels}
+\label{sec:claimlevels}
+
+The current Energy manuscript uses three claim levels.
+\begin{enumerate}
+  \item \textbf{Procedure-level claims}: the utility definition, calibration-only normalization, dataset-level thresholding within each dataset-profile slice, condition-local oracle signs, and the cost-definition gate.
+  \item \textbf{Current split findings}: the presently reported coverage, disagreement, provider, temperature, and ordered-combination reads under the shipped calibration/test split.
+  \item \textbf{Forward transfer boundaries}: the implementation-gated covered-slice replay results, interpreted as transfer-boundary evidence rather than as online policy-improvement evidence.
+\end{enumerate}
+
+Repository-shipped downstream `Policy-Verification` notes are retained as bounded handoff references for later validation work. They are not part of the core manuscript evidence claims that this paper closes.
+
+\section{Calibration and Transfer Results}
+\label{sec:results}
+
+\subsection{E-1 Calibration Summary}
+\label{sec:e1summary}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Dataset & Profile & $\tau$ (gross) & $\tau$ (net) & Coverage gross $\rightarrow$ net & Disagreement gross $\rightarrow$ net \\
+\midrule
+Stage B & \texttt{q80\_c20} & 0.01231 & 0.01184 & 57.30\% $\rightarrow$ 74.16\% & 8.99\% $\rightarrow$ 14.61\% \\
+Stage B & \texttt{q50\_c50} & 0.01428 & 0.01377 & 52.81\% $\rightarrow$ 84.27\% & 6.74\% $\rightarrow$ 17.98\% \\
+Stage B & \texttt{q20\_c80} & 0.04087 & 0.03349 & 51.69\% $\rightarrow$ 80.90\% & 6.74\% $\rightarrow$ 11.24\% \\
+Combo & \texttt{q80\_c20} & 0.08366 & 0.08101 & 47.83\% $\rightarrow$ 71.01\% & 2.90\% $\rightarrow$ 2.90\% \\
+Combo & \texttt{q50\_c50} & 0.04310 & 0.03941 & 47.83\% $\rightarrow$ 75.36\% & 2.90\% $\rightarrow$ 2.90\% \\
+Combo & \texttt{q20\_c80} & 0.00255 & 0.02245 & 63.77\% $\rightarrow$ 75.36\% & 7.25\% $\rightarrow$ 4.35\% \\
+\bottomrule
+\end{tabular}
+\caption{Calibration summary across all three weight profiles.}
+\label{tab:e1_summary}
+\end{table}
+
+Each reported $\tau$ value is the shipped dataset-profile threshold for that
+row, while disagreement is still evaluated against condition-local oracle
+signs inside the same dataset-profile slice.
+
+Interpretation follows four stable points. First, net calibration increases coverage in all dataset-profile cells. Second, Stage B shows coverage gain with disagreement increase under all profiles. Third, Combo shows coverage gain with stable-or-lower disagreement. Fourth, in Combo the \texttt{q20\_c80} profile changes the gross-side disagreement level (7.25\%) relative to the other profiles (2.90\%), so stronger cost weighting alters the gross calibration behavior itself rather than only the net correction. Across profiles, Stage B remains higher-disagreement than Combo under net calibration.
+
+\subsection{Cost Definition Gate}
+\label{sec:costgate}
+
+Observed sign-flip rates for $C_{\mathrm{gross}} \rightarrow C_{\mathrm{net}}$ are 37.08\% (99/267) for Stage B and 38.21\% (81/212) for Combo under \texttt{C\_net(output)}, versus 66.29\% (177/267) and 65.09\% (138/212) under \texttt{C\_net(total)}. We therefore adopt \texttt{C\_net(output)} as the primary cost term and reject \texttt{C\_net(total)} for primary calibration because input-side fixed cost dominates and distorts recoverable-cost interpretation. \texttt{C\_gross} remains the reference upper-bound view.
+
+\subsection{E-2 Sensitivity}
+
+The primary reporting slice is \texttt{q50\_c50} under net calibration. Overall disagreement is 17.98\% for Stage B and 2.90\% for Combo, with coverage of 84.27\% and 75.36\%, respectively. Provider-separated disagreement under the same slice is 10.00\% (3/30) for Anthropic, 34.48\% (10/29) for Gemini, and 10.00\% (3/30) for OpenAI in Stage B, versus 0.00\% (0/24) for Anthropic, 9.52\% (2/21) for Gemini, and 0.00\% (0/24) for OpenAI in Combo. Temperature sensitivity in Stage B remains ordered as $t=0.3$ (11/45; 24.44\%) $>$ $t=0.0$ (5/44; 11.36\%). In Combo, weaker directions appear in \texttt{conditional\_hierarchical} and \texttt{delta\_hierarchical}, both at 11.11\% disagreement. These weak-direction reads should be interpreted under the current provisional split contract: the shipped condition-local oracle support is uneven in some cells, including a \texttt{delta\_hierarchical} Gemini drift-return-recovery cell that has only one calibration replicate in the current table, so these rows are boundary warnings rather than stable fine-grained estimates.
+
+Across all three profiles, Gemini remains the highest-disagreement provider in both datasets, and Stage B preserves the $t=0.3 > t=0.0$ ordering. In Combo, the weaker directions remain concentrated in a small profile-sensitive cluster rather than a fixed pair: \texttt{conditional\_hierarchical} and \texttt{delta\_hierarchical} are the weak cells on the primary \texttt{q50\_c50} slice, while \texttt{q20\_c80} also shows weakness in \texttt{conditional\_delta}.
+
+\subsection{Implementation-Gated Forward Boundary Check}
+\label{sec:forwardboundary}
+
+Under the current \texttt{decision\_context\_v2 + compact-grounding} path, routed live Stage A freeze reached \texttt{frozen} for Anthropic and Gemini in both \texttt{stable} and \texttt{context-drift} conditions. This resolves the earlier wiring blocker at the implementation-trial level, but it does not by itself establish that the routed shared-prefix readout is a direct grounded-state-quality measure.
+
+Shipped forward summary memos report exact replay on both tested providers for the branch slice (\(24/24\) exact matches each). Anthropic kept the stable scenario on the pattern side (\(8/8\)) while \texttt{context-drift} and \texttt{drift-return-recovery} stayed baseline-side (\(8/8\) each). Gemini completed the same covered slice with exact replay, but its stable scenario split between pattern and baseline (\(3/8\) versus \(5/8\)), establishing a provider-specific route-instability boundary even before combo widening.
+
+The first branch-adjacent two-direction combo opening sharpened that contrast. Shipped forward summary memos report that Anthropic replayed exactly on \(48/48\) pairs and kept the stable slice pattern-side for both tested directions (\(16/16\) total), whereas Gemini also replayed exactly on \(48/48\) pairs but sent the same stable combo slice fully baseline-side (\(16/16\)). In all of these forward batches, realized baseline and Energy outcomes remained matched within batch. The forward evidence is therefore operational and boundary-facing at the shipped summary-memo level: it shows that the current instrument can be executed on the tested slices and that the resulting read delimits a provider-specific transfer boundary, while also preventing any gain claim at this stage.
+\section{Boundary Readout}
+\label{sec:boundaries}
+
+\subsection{Calibration Disagreement Boundaries}
+\label{sec:calibrationboundaries}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}Xcc@{}}
+\toprule
+Region (\texttt{q50\_c50}, net) & Disagree rate & 95\% Wilson CI \\
+\midrule
+Stage B overall (16/89) & 17.98\% & [11.38\%, 27.23\%] \\
+Combo overall (2/69) & 2.90\% & [0.80\%, 9.97\%] \\
+Stage B Gemini (10/29) & 34.48\% & [19.94\%, 52.65\%] \\
+Combo Gemini (2/21) & 9.52\% & [2.65\%, 28.91\%] \\
+Stage B \texttt{t=0.3} (11/45) & 24.44\% & [14.24\%, 38.67\%] \\
+Stage B \texttt{t=0.0} (5/44) & 11.36\% & [4.95\%, 23.98\%] \\
+Combo \texttt{conditional\_hierarchical} (1/9) & 11.11\% & [1.99\%, 43.50\%] \\
+Combo \texttt{delta\_hierarchical} (1/9) & 11.11\% & [1.99\%, 43.50\%] \\
+\bottomrule
+\end{tabularx}
+\caption{Representative disagreement-prone regions.}
+\label{tab:boundary_regions}
+\end{table}
+
+These are boundary findings, not anomalies to hide. Three readings matter operationally. First, Gemini-centered instability is supported, especially in Stage B. Second, Stage B at higher temperature remains a disagreement-risk region. Third, Combo weaker directions are visible but still have wide intervals because $n$ is small, and some condition-level oracle reads are supported by uneven calibration replicate coverage in the current provisional split; they are boundary warnings rather than high-precision estimates.
+
+\subsection{Sign-Flip and Non-Effective Context}
+\label{sec:signflipcontext}
+
+The disagreement table above should not be read as the only boundary type in the current Energy line. Complementary sign-flip boundary summaries on the shipped paired-input surfaces disclose provider-reversal patterns together with zero-provider support columns as a package-level non-effective-context layer. In the current paper we therefore keep calibration disagreement as the main manuscript-facing split-level boundary read, while treating the sign-flip/non-effective layer as shipped paired-input heterogeneity disclosure rather than a fully tabulated manuscript result. The former is a property of the current split-level decision rule under the shipped calibration procedure; the latter remains a paired-input heterogeneity warning that constrains how broadly any calibration-side read should be generalized.
+
+\section{Discussion}
+\label{sec:discussion}
+
+The Energy instrument can be calibrated reproducibly on existing paired data and can expose where decision confidence is likely to degrade. Calibration quality is nevertheless condition-dependent. In the tested Stage B single-operator settings, output-overhead-adjusted utility can increase callable decisions while also increasing misalignment risk. In the tested ordered-combo settings, the same correction improves callable coverage without increasing overall disagreement. This contrast is consistent with, but does not by itself prove, an effect-size explanation. Energy should therefore be treated as a condition-gated instrument, not as a universal replacement rule.
+
+The same $\Delta U$ framing can also be read as a bounded cost-of-resolution instrument. Under this read, a commit-side move corresponds to executing deferred comparative resolution at the current output boundary, whereas a defer-side move keeps unresolved alternatives active and postpones that resolution step. A positive $\Delta U$ therefore means not that cost disappears, but that under the tested condition the delayed-resolution route has higher net utility than immediate collapse at that step. The disagreement-prone regions reported here, together with the package-disclosed sign-flip/non-effective summaries, then mark conditions where that delay no longer yields a stable net advantage. This remains a local interpretation of the present calibration signal, not a general complexity claim.
+
+In series terms, that makes Energy a calibration and boundary layer rather than the
+place where the whole downstream closure is proved. Its role is to separate where
+local carryforward looks trustworthy from where later policy claims still require
+their own direct tests.
+
+One plausible interpretation is that the Stage B versus Combo disagreement gap reflects effect-size structure rather than a categorical difference between single-operator and ordered-combination datasets. Under tested conditions, Combo cells include stronger directional separations, so the same calibration procedure can expand callable coverage with less disagreement increase than in the smaller-effect Stage B cells. This remains a conditional interpretation: the current evidence supports an effect-size-consistent explanation under these datasets, not a universal law that ordered combinations are always easier to calibrate.
+
+A second boundary is self-reference. The current oracle labels are derived from calibration-split mean $\Delta U$ signs, so the evaluation remains an internal consistency check of the calibrated instrument rather than an external prospective policy test. That is why the next step remains a new paired validation (baseline versus Energy policy) under frozen procedures. Until that forward test is run, the present results justify calibration and boundary reporting, but they do not justify direct claims that the calibrated instrument improves online commit/defer policy outcomes by itself.
+
+A third boundary concerns the routed Stage A implementation path that this calibration is intended to support later. The shipped live implementation-trial surface records extractor identity, freeze status, and calibrated \(q/c\) moments for the four routed runs, but it does not isolate subterm contributions inside the routed shared-prefix readout. Under current implementation-gated live checks, that readout is therefore best treated as a bounded response-quality calibration signal rather than as a direct grounded-state-quality measure. We therefore treat the present Stage A path as an implementation-gated calibration path for later forward validation, not as standalone evidence that the routed prefix signal already identifies grounded state quality directly.
+
+A fourth boundary comes from the first covered forward checks. Exact replay and successful routed freeze show that the current implementation path is operationally usable on the tested slices, but operational usability is not the same as balanced forward effectiveness. Anthropic remains route-stable on the tested branch and branch-adjacent combo stable slices, whereas Gemini already shows stable-slice route instability on the tested branch covered slice and that instability becomes stricter when the combo slice is opened. Because baseline and Energy outcomes remain matched inside those batches, the forward evidence narrows transfer boundaries rather than upgrading this paper to a policy-improvement result.
+
+A fifth boundary is scope. Downstream `Policy-Verification` materials shipped in the repository are bounded handoff references for later validation work, not closed Energy paper-level evidence claims. They are useful for tracing how the calibration/control layer connects to later operational checks, but they do not widen the present paper into a downstream policy-superiority or later-horizon closure result.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+NRR-Energy contributes a calibrated commit/defer utility instrument under existing paired inputs anchored by a fixed integrated paper7 authority surface and a separate frozen Boundary-derived physical input snapshot, together with a narrow implementation-gated forward boundary read on how that instrument transfers to frozen routed execution. The current upstream paper7 role in the series chain is the family-specific paired-baseline benchmark plus selected Stage B boundary-honesty layer rather than a same-scale ranking surface, while the physical ordered-combo and raw paired files are carried by the fixed 2026-03-07 Boundary-derived vendored snapshot recorded in the reproducibility note. The current evidence supports reproducible calibration and boundary reporting, not prospective policy-superiority claims. Under tested conditions, net-cost calibration expands callable coverage relative to gross-cost calibration, but the quality of that expansion depends on provider, temperature, and ordered-combination cell. Gemini-centered instability, Stage B at higher temperature, and specific Combo directions remain explicit disagreement-prone regions in the manuscript-facing slice, while the shipped paired-input surfaces disclose complementary sign-flip/non-effective context, and the forward surface adds a provider-specific transfer boundary: Gemini already shows stable-slice route instability on the tested branch covered slice, and the tested combo opening sharpens that boundary further.
+
+The practical contribution is therefore condition-bounded instrumentation: a way to measure when a commit/defer signal is more or less trustworthy before promoting it to a live policy rule. The current manuscript closes at procedure-level calibration claims, current split-bounded findings, and forward transfer-boundary reporting. Repository-shipped downstream handoff notes remain available for later validation work, but they are not part of the core Energy evidence claim that this paper closes.
+This manuscript should therefore be read as a closed calibration and handoff package
+at the level of the shipped manuscript sources, bundled tables, vendored paired
+inputs, and summary-level boundary memos. It is not a full rerun workspace for every
+historical forward execution file, and its forward package contract closes at the
+shipped summary-memo surface rather than at a complete raw-payload or audit export.
+
+\section{Reproducibility}
+\label{sec:repro}
+
+Current manuscript-side artifacts shipped in the current review surface:
+\begin{itemize}
+  \item \texttt{stats/evidence/energy\_e1\_delta\_u\_table\_v1\_1.csv}
+  \item \texttt{stats/evidence/energy\_e1\_cost\_variant\_audit\_v1.csv}
+  \item \texttt{stats/evidence/energy\_e1\_tau\_summary\_v1\_1.csv}
+  \item \texttt{stats/evidence/energy\_e2\_sensitivity\_summary\_v1.csv}
+  \item \texttt{stats/evidence/recompute\_energy\_e1\_tables.py}
+  \item \texttt{stats/evidence/recompute\_energy\_e2\_sensitivity.py}
+  \item \texttt{scripts/rebuild\_all.sh}
+  \item \path{results/analysis/energy_stagea_v2_impltrial_anthropic_gemini_summary_v1_2026-03-12.md}
+  \item \path{results/analysis/energy_forward_main_batch_results_v1_2026-03-12.md}
+  \item \path{results/analysis/energy_forward_main_batch_gemini_results_v1_2026-03-12.md}
+  \item \path{results/analysis/energy_forward_combo_two_direction_anthropic_results_v1_2026-03-13.md}
+  \item \path{results/analysis/energy_forward_combo_two_direction_gemini_results_v1_2026-03-13.md}
+  \item \path{results/analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md}
+  \item \path{results/analysis/energy_policy_verification_priority_resolution_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md}
+  \item \path{results/analysis/energy_policy_verification_pilot_readout_external_review_decision_memo_v1_2026-03-17.md}
+  \item \path{results/analysis/energy_policy_verification_downstream_boundary_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md}
+  \item \path{results/analysis/energy_policy_verification_downstream_boundary_readout_external_review_decision_memo_v1_2026-03-17.md}
+  \item \path{results/analysis/energy_policy_verification_side_topic_quarantine_readout_external_review_decision_memo_v1_2026-03-18.md}
+  \item \path{results/analysis/energy_policy_verification_side_topic_quarantine_baseline_vs_revised_energy_policy_comparison_memo_v2_2026-03-18.md}
+\end{itemize}
+
+The shipped Stage A implementation-trial summary memo is accompanied by its
+directly linked audit, freeze-gate, freeze-manifest, and calibration-bundle
+artifacts for the four routed runs. The shipped downstream comparison memos
+are accompanied by their linked run-annotation CSVs and authorized run-output
+directories for the frozen 2026-03-17 priority-resolution, downstream-boundary,
+and repaired side-topic/quarantine provider slices.
+
+For the current draft state, vendored calibration inputs are stored under:
+\begin{itemize}
+  \item \texttt{stats/stageb\_all/}
+  \item \texttt{stats/combo\_rep3\_all/}
+  \item \texttt{stats/raw\_stageb\_all/}
+  \item \texttt{stats/raw\_combo\_rep3\_all/}
+\end{itemize}
+
+The current review surface ships the Stage A implementation-trial summary
+together with its directly linked local support artifacts. Later forward
+boundary evidence remains summary-memo level only. Some historical forward raw
+payload, audit, bundle, and decision-context files referenced by the later
+forward summary memos are not retained inside the current review surface, so
+the exact-replay counts reported above are package-supported here at the
+shipped summary-memo layer rather than at a full raw rerun or audit export.
+
+These inputs function here as frozen carried-forward paired inputs for the current
+Energy calibration surface. Their physical origin is the fixed 2026-03-07
+vendored snapshot copied from the historical Boundary workspace. Their reviewer-facing
+authority role is narrower: the fixed integrated paper7 surface anchors the upstream
+family-benchmark plus selected Stage B boundary-honesty read, while ordered-combo
+reuse is an Energy-side calibration extension from the same frozen Boundary-derived
+snapshot rather than part of that fixed paper7 authority contract. Detailed historical
+source and copy provenance are recorded in the reproducibility note rather than treated
+as part of the manuscript-facing role explanation.
+
+\begin{thebibliography}{99}
+\raggedright
+
+\bibitem{saito2025nrr}
+K.~Saito,
+\newblock ``NRR-Core: Non-Resolution Reasoning as a Computational Framework for Contextual Identity and Ambiguity Preservation,''
+\newblock \emph{arXiv preprint arXiv:2512.13478}, 2025.
+
+\bibitem{saito2026phi}
+K.~Saito,
+\newblock ``NRR-Phi: Text-to-State Mapping for Ambiguity Preservation in LLM Inference,''
+\newblock \emph{arXiv preprint arXiv:2601.19933}, 2026.
+
+\bibitem{saito2026ime}
+K.~Saito,
+\newblock ``NRR-IME: Interface Decomposition for Stable State Transitions on Stateless LLM APIs,''
+\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
+\path{manuscript/current/paper4-nrr-ime-v67.tex}. \url{https://github.com/kei-saito-research/nrr-ime/tree/99f5ebbbc3e854b575f95b2e70ef65686a44ba4d}.
+
+\bibitem{saito2026transfer}
+K.~Saito,
+\newblock ``Cross-Task Parser/Update Reuse of a Fixed Hidden-State Operator-Target Interface on Stateless LLM APIs,''
+\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
+\path{manuscript/current/paper5-nrr-transfer-v123.tex}. \url{https://github.com/kei-saito-research/hidden-state-interface-reuse/tree/24bd24ea183f282cf535205ca4447e8169bac3b0}.
+
+\bibitem{saito2026coupled}
+K.~Saito,
+\newblock ``NRR-Coupled (cp): Dependency-Consistency Evaluation for Coupled State Updates,''
+\newblock Series-path repository tree snapshot cited for context only. Manuscript snapshot in cited tree:
+\path{manuscript/current/paper6-nrr-coupled-v21.tex}.
+\url{https://github.com/kei-saito-research/nrr-coupled/tree/aab7cc500acc413d4f585c8a50a9045cb5477eb5}.
+
+\bibitem{saito2026principles}
+K.~Saito,
+\newblock ``NRR-Patterns: Condition-Bounded Comparison of Five Delayed-Commitment Patterns in Stateful LLM Systems,''
+\newblock Fixed manuscript snapshot used for the current upstream role:
+\path{manuscript/current/paper7_integrated_manuscript_v0_29_2026-04-01.tex}
+with companion checksum manifest
+\path{manuscript/current/paper7_integrated_checksums_sha256.txt}.
+Current repository surface: \url{https://github.com/kei-saito-research/nrr-principles} (accessed 2026-04-01).
+
+\bibitem{guo2017calibration}
+C.~Guo, G.~Pleiss, Y.~Sun, and K.~Q. Weinberger,
+\newblock ``On Calibration of Modern Neural Networks,''
+\newblock In \emph{Proceedings of the 34th International Conference on Machine Learning}, 2017.
+
+\bibitem{geifman2017selective}
+Y.~Geifman and R.~El-Yaniv,
+\newblock ``Selective Classification for Deep Neural Networks,''
+\newblock In \emph{Advances in Neural Information Processing Systems 30}, 2017.
+
+\bibitem{wilson1927}
+E.~B. Wilson,
+\newblock ``Probable inference, the law of succession, and statistical inference,''
+\newblock \emph{Journal of the American Statistical Association}, 22(158):209--212, 1927.
+
+\end{thebibliography}
+
+\end{document}

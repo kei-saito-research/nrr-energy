@@ -62,7 +62,7 @@ It does not answer:
   - This split instance is provisional; the split procedure is the fixed part.
 
 ### 3.4 Oracle, Disagreement, and CI
-- Oracle sign per condition is defined by calibration-side mean `DeltaU` sign.
+- Threshold `tau` is derived per dataset/profile slice, while oracle sign remains condition-local and is defined by calibration-side mean `DeltaU` sign.
 - Test rows output:
   - `decision` (`prefer_pattern` / `prefer_baseline` / `tie`)
   - `coverage` flag
@@ -81,7 +81,7 @@ It does not answer:
 | E1-06 | Adopted (CSV-complete outputs for tie/coverage/disagree and CI-ready counts). | 3.4 |
 | E1-07 | Adopted (noise-floor method retained as diagnostic only, not as the primary decision rule). | 3.3 |
 | E1-08 | Adopted (`C_net(output)` primary, `C_gross` reference, `C_net(total)` rejected for primary use). | 4.2 |
-| E1-09 | Adopted as procedure freeze (derive `tau` per condition/profile), not value freeze of a single global table. | 3.3, 4.1 |
+| E1-09 | Adopted as procedure freeze (derive `tau` per dataset/profile while keeping oracle signs condition-local), not value freeze of a single global table. | 3.3, 4.1 |
 
 ## 4. Results
 ### 4.1 E-1 Calibration Summary (All 3 Weight Profiles)
