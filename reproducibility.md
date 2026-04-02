@@ -10,7 +10,7 @@ handoff artifacts needed to reproduce the current handoff-ready Energy line.
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v28.pdf`
+  - default output: `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v29.pdf`
 - Verify the active review surface:
   - `bash scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
@@ -26,8 +26,8 @@ handoff artifacts needed to reproduce the current handoff-ready Energy line.
 
 ## Current review package
 
-- Main TeX: `manuscript/current/nrr-energy_manuscript_v28.tex`
-- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v28.pdf`
+- Main TeX: `manuscript/current/nrr-energy_manuscript_v29.tex`
+- Current PDF snapshot: `manuscript/current/nrr-energy_manuscript_v29.pdf`
 - Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
 - Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
 - `manuscript/current/` is latest-only and contains only the active manuscript `.tex` / `.pdf` pair.
@@ -152,13 +152,13 @@ but they are not part of the current review-package authority surface.
 
 | Artifact | Command | Output |
 |---|---|---|
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v28.pdf` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-energy_current_build/nrr-energy_manuscript_v29.pdf` |
 | Active review surface verification | `bash scripts/verify_active_review_surface.sh` | stdout verification for `manuscript/checksums_active_review_surface_sha256.txt` plus latest-only checks on `manuscript/current/` |
 | Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/checksums_current_package_sha256.txt` |
 | Step 3 closure contract verification | `bash scripts/verify_step3_closure_contract.sh` | stdout pass/fail for repo-side Step 3 closure preflight |
 | Current review package build | `bash scripts/build_current_review_package.sh` | zip path for the current allowlisted review package |
 | Energy evidence recomputation | `bash scripts/recompute_evidence.sh` | refreshed `stats/evidence/energy_e1_*` and `stats/evidence/energy_e2_sensitivity_summary_v1.csv` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v28.tex` |
+| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/nrr-energy_manuscript_v29.tex` |
 
 ## Scope caveat
 

@@ -16,8 +16,8 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Source: `manuscript/current/nrr-energy_manuscript_v28.tex`
-- PDF: `manuscript/current/nrr-energy_manuscript_v28.pdf`
+- Source: `manuscript/current/nrr-energy_manuscript_v29.tex`
+- PDF: `manuscript/current/nrr-energy_manuscript_v29.pdf`
 - Active review checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
 - Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
 - `manuscript/current/` is latest-only and keeps only the active manuscript `.tex` / `.pdf` pair for this repo surface.
@@ -116,8 +116,8 @@ nrr-energy/
 |   |-- checksums_active_review_surface_sha256.txt
 |   |-- checksums_current_package_sha256.txt
 |   `-- current/
-|       |-- nrr-energy_manuscript_v28.tex
-|       `-- nrr-energy_manuscript_v28.pdf
+|       |-- nrr-energy_manuscript_v29.tex
+|       `-- nrr-energy_manuscript_v29.pdf
 |-- results/
 |   `-- analysis/
 |-- scripts/
