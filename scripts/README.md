@@ -14,14 +14,14 @@ research and runtime helpers used by the current Energy line.
 - `verify_step3_closure_contract.sh`
   - verifies the current manuscript/package contract on the repo surface or an unpacked package
 - `build_current_review_package.sh`
-  - builds the current allowlisted package from the shared package contract
+  - builds the current allowlisted package bundle from the shared package contract
 - `recompute_evidence.sh`
   - stable wrapper for recomputing the bundled E-1 and E-2 evidence tables
 
 ## Shared package contract
 
 - `review_package_contract.sh`
-  - single source of truth for the stable package entrypoints and the shipped allowlist used by both build and verification
+  - single source of truth for the stable package entrypoints and shipped allowlist used by both build and verification
 
 ## Core rebuild helper
 

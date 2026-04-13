@@ -15,8 +15,8 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Source: `manuscript/current/nrr-energy_manuscript_v31.tex`
-- PDF: `manuscript/current/nrr-energy_manuscript_v31.pdf`
+- Source: `manuscript/current/nrr-energy_manuscript_v32.tex`
+- PDF: `manuscript/current/nrr-energy_manuscript_v32.pdf`
 - Active manuscript checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
 - Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
 - `manuscript/current/` is latest-only and keeps only the active manuscript `.tex` / `.pdf` pair for this repo surface.
@@ -28,7 +28,7 @@ For the cross-paper map and current series links, start here:
 - Verify active manuscript surface: `bash scripts/verify_active_review_surface.sh`
 - Verify current manuscript checksum package: `bash scripts/verify_current_package.sh`
 - Verify Step 3 closure contract on the repo surface: `bash scripts/verify_step3_closure_contract.sh`
-- Verify Step 3 closure contract on an unpacked package: `bash scripts/verify_step3_closure_contract.sh /path/to/unpacked_review_root`
+- Verify Step 3 closure contract on an unpacked package: `bash scripts/verify_step3_closure_contract.sh /path/to/unpacked_package_root`
 - Recompute bundled Energy evidence tables: `bash scripts/recompute_evidence.sh`
 
 ## Current Energy package
@@ -63,17 +63,8 @@ For the cross-paper map and current series links, start here:
   - `results/analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md`
   - the shipped Stage A implementation-trial surface also includes the directly linked audit, package-local condition-metadata CSVs, freeze-gate, freeze-manifest, and calibration-bundle artifacts for the four routed runs
 - Bundled downstream references for later `Policy-Verification` work:
-  - `results/analysis/energy_policy_verification_priority_resolution_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md`
-  - `results/analysis/energy_policy_verification_pilot_readout_external_review_decision_memo_v1_2026-03-17.md`
-  - `results/analysis/energy_policy_verification_downstream_boundary_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md`
-  - `results/analysis/energy_policy_verification_downstream_boundary_readout_external_review_decision_memo_v1_2026-03-17.md`
-  - `results/analysis/energy_policy_verification_side_topic_quarantine_readout_external_review_decision_memo_v1_2026-03-18.md`
-  - `results/analysis/energy_policy_verification_side_topic_quarantine_baseline_vs_revised_energy_policy_comparison_memo_v2_2026-03-18.md`
-  - supporting downstream artifacts are also shipped:
-    - minispec and repair memos for the repaired side-topic/quarantine line
-    - repaired and superseded side-topic/quarantine run-input CSVs
-    - linked run-annotation CSVs
-    - authorized run-output directories for the frozen 2026-03-17 priority-resolution, downstream-boundary, and repaired side-topic/quarantine slices
+  - summary-level comparison notes for priority-resolution, downstream-boundary, and side-topic/quarantine follow-up surfaces
+  - linked support artifacts for those downstream slices, including minispec and repair notes, run-input CSVs, run-annotation CSVs, and the authorized 2026-03-17 run-output directories needed to audit the bundled summaries
 
 ## Scope boundary
 
@@ -115,8 +106,8 @@ nrr-energy/
 |   |-- checksums_active_review_surface_sha256.txt
 |   |-- checksums_current_package_sha256.txt
 |   `-- current/
-|       |-- nrr-energy_manuscript_v31.tex
-|       `-- nrr-energy_manuscript_v31.pdf
+|       |-- nrr-energy_manuscript_v32.tex
+|       `-- nrr-energy_manuscript_v32.pdf
 |-- results/
 |   `-- analysis/
 |-- scripts/
@@ -139,6 +130,7 @@ nrr-energy/
 - `bash scripts/verify_current_package.sh`
 - `bash scripts/verify_step3_closure_contract.sh`
 - `bash scripts/build_current_review_package.sh`
+  current allowlisted package bundle
 - `bash scripts/recompute_evidence.sh`
 
 ## License
