@@ -1,14 +1,14 @@
 # Results Layout
 
 This directory holds the Energy-line result bundles and derived analysis outputs
-that support the current manuscript and handoff-ready package.
+that support the current manuscript and bundled package.
 
 ## Current structure
 
 - `analysis/`
-  - manuscript-facing calibration and transfer summary memos
-  - upstream authority / input-role split notes
-  - downstream handoff references for later `Policy-Verification` work
+  - manuscript-facing calibration and transfer summaries
+  - upstream reference notes
+  - downstream reference materials for later `Policy-Verification` work
   - supporting audits and derived tables
 
 ## Current manuscript-facing calibration and transfer anchors
@@ -21,7 +21,7 @@ that support the current manuscript and handoff-ready package.
 - `analysis/energy_upstream_paper7_fixed_reference_note_v2_2026-04-01.md`
 - the packaged Stage A implementation-trial surface also ships the directly linked audit, package-local condition-metadata CSVs, freeze-gate, freeze-manifest, and calibration-bundle artifacts for the four routed runs
 
-## Bundled downstream handoff references
+## Bundled downstream references
 
 - `analysis/energy_policy_verification_priority_resolution_baseline_vs_energy_policy_comparison_memo_v1_2026-03-17.md`
 - `analysis/energy_policy_verification_pilot_readout_external_review_decision_memo_v1_2026-03-17.md`
@@ -39,28 +39,28 @@ that support the current manuscript and handoff-ready package.
 - `analysis/energy_policy_verification_side_topic_quarantine_run_input_gemini_v1_2026-03-17.csv`
 - `analysis/energy_policy_verification_side_topic_quarantine_run_input_v2_2026-03-18.csv`
 - `analysis/energy_policy_verification_side_topic_quarantine_run_input_gemini_v2_2026-03-18.csv`
-- the packaged downstream handoff surface also ships the linked run-annotation CSVs and authorized run-output directories for the frozen 2026-03-17 priority-resolution, downstream-boundary, and repaired side-topic/quarantine provider slices
+- the packaged downstream reference surface also ships the linked run-annotation CSVs and authorized run-output directories for the frozen 2026-03-17 priority-resolution, downstream-boundary, and repaired side-topic/quarantine provider slices
 
 ## Current scope note
 
-- Calibration evidence tables remain under `../stats/evidence/`, with `energy_e1_*_v1_1.csv` as the current E-1 authority surface.
+- Calibration evidence tables remain under `../stats/evidence/`, with `energy_e1_*_v1_1.csv` as the current E-1 table set.
 - The shipped Stage A implementation-trial surface includes the directly linked audit, freeze-gate, freeze-manifest, and calibration-bundle artifacts for the four routed runs.
 - The Stage A audit memos in the package point only to shipped relative paths, not repo-local absolute paths.
-- The later forward review surface still closes at summary memos rather than at a complete raw rerun or audit export.
-- The current package keeps the fixed `paper7` authority surface separate from the
+- The later forward surface is summarized through shipped notes rather than through a complete raw rerun export.
+- The current package keeps the fixed `paper7` reference surface separate from the
   frozen Boundary-derived physical input snapshot; the overlap is the carried-forward
   Stage B slice, while ordered-combo reuse is treated as an Energy-side extension.
-- The current results surface includes bundled downstream handoff references for later
+- The current results surface includes bundled downstream references for later
   `Policy-Verification` validation work, but those materials are not part of the core
   manuscript evidence claim that the Energy paper closes.
-- The linked run-annotation CSVs and authorized 2026-03-17 run-output directories for the shipped downstream comparison memos, including the repaired side-topic/quarantine reruns, are included in the review package.
+- The linked run-annotation CSVs and authorized 2026-03-17 run-output directories for the shipped downstream comparison memos, including the repaired side-topic/quarantine reruns, are included in the package.
 - Superseded malformed-input side-topic/quarantine `v1` readouts are shipped only as
-  provenance under `analysis/archive/2026-04-01_superseded_side_topic_quarantine_v1/`
+  historical reference material under `analysis/archive/2026-04-01_superseded_side_topic_quarantine_v1/`
   and are not part of the active manuscript-facing surface.
 
 ## Archive note
 
 - `analysis/archive/2026-04-01_superseded_side_topic_quarantine_v1/` is the only
-  shipped archive subset in the current review package, retained for provenance only.
+  shipped archive subset in the current package, retained as historical reference only.
 - The broader `analysis/archive/` tree remains repo-local history and is not fully shipped.
 - The current package entry points are the files listed above rather than archived notes.
